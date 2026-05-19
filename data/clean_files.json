@@ -1,0 +1,1224 @@
+{
+  "files": {
+    "bink2w64.dll": {
+      "size": 445936,
+      "hash": "ec8f58f884eb48ff4b09c71b781b224ef8aff775e6b05be7b6dd48b5ea527d05"
+    },
+    "commandline.txt": {
+      "size": 25,
+      "hash": "c2544cb0a7a657d6ae3492f876465dfdadd536cafa4ca485d843b657dacf88a8"
+    },
+    "common.rpf": {
+      "size": 27705344,
+      "hash": "45b6b0c39a585f5f42f56dfe18dbd40223945edfd4a9fe4b397d5f517bbe6156"
+    },
+    "d3dcompiler_46.dll": {
+      "size": 3873208,
+      "hash": "dde5c2d0ff52f07017ea91e833f3baeca74661539599795df2e8096218abcca7"
+    },
+    "d3dcsx_46.dll": {
+      "size": 1916872,
+      "hash": "85017342fd829fbd32d7045c2c0b2254e68e5c3bd6faa59c920dec878c765dcd"
+    },
+    "enblocal.ini": {
+      "size": 550,
+      "hash": "bf81c67455ae5bdc2862b529f94bcdbdcb5ad964870dd539e4bcb97060e59715"
+    },
+    "enbseries.ini": {
+      "size": 10547,
+      "hash": "1b035a0340ef486cd31a2f4ef55af745b07ff896860c7901a12e4d20d674a3a0"
+    },
+    "fvad.dll": {
+      "size": 34280,
+      "hash": "8c5666fc63067178e74299b79066be770b75fef5d3b6c7072bcbe3e445e4ffa0"
+    },
+    "GFSDK_ShadowLib.win64.dll": {
+      "size": 3964912,
+      "hash": "9c899fd74373adbbbe079bf26d5c3ff3e4a46b3e555f69191124f5de4fa3219b"
+    },
+    "GFSDK_TXAA.win64.dll": {
+      "size": 104944,
+      "hash": "67e30644e2694d811d002f38108c5633ade5ac7e0715bde5d13bf5bf9d217fe0"
+    },
+    "GFSDK_TXAA_AlphaResolve.win64.dll": {
+      "size": 104944,
+      "hash": "a3de45987bfe6bc8fb64efecd4e96660bfee76df958beea5b03a4f26f1222b93"
+    },
+    "GPUPerfAPIDX11-x64.dll": {
+      "size": 8670704,
+      "hash": "f27e5012635d9afb1c6ba9bae9d169d629a3955e7c46a9b59a5d116140ced8d5"
+    },
+    "GTA5.exe": {
+      "size": 49221752,
+      "hash": "5cb8a19a4d0f5431db9ec4ac6f6acabcc9dc8b1a78263b02845886853ed1e39c"
+    },
+    "GTA5_BE.exe": {
+      "size": 1473144,
+      "hash": "73e7362c8f31df3dd331b51e3f9b9dbcd1b533d573b484e1085972ff5bfe802b"
+    },
+    "GTAVLanguageSelect.exe": {
+      "size": 569464,
+      "hash": "1f78dbab6ab8d756ea394df5fd387f0e9540d55a59a674de45efadd1d7efeeb0"
+    },
+    "GTAVLauncher.exe": {
+      "size": 569464,
+      "hash": "1f78dbab6ab8d756ea394df5fd387f0e9540d55a59a674de45efadd1d7efeeb0"
+    },
+    "imgui.ini": {
+      "size": 866,
+      "hash": "b388b72be5562b45728145df86d11813a448b8da5b42c1c79a7eac94e2b58ce5"
+    },
+    "installscript.vdf": {
+      "size": 595,
+      "hash": "5618197140b7cc0147113c8bedc8ee37c3a05964519c484f277b7630eb30fa14"
+    },
+    "installscript_sdk.vdf": {
+      "size": 829,
+      "hash": "07a4534c584d59200ee30a5b518c1b444f098e9ae45312dc4a2bbc74ae8d4cf1"
+    },
+    "libcurl.dll": {
+      "size": 545256,
+      "hash": "a37d36683bb9e6f32043e321a570ccf183c6ab14b625fd64ce951744bb86f889"
+    },
+    "libtox.dll": {
+      "size": 269800,
+      "hash": "2c8b2963901b0179b4af82e7f6fb7cc8be37029cfe6cc0ed80f1e64e2ee51857"
+    },
+    "NvPmApi.Core.win64.dll": {
+      "size": 3687920,
+      "hash": "badc97f97e3dad8bd73d8cc61bf467f4e8e7b204eeb2953083088f259c4b539f"
+    },
+    "opus.dll": {
+      "size": 407016,
+      "hash": "021a1955615143916eb0bdedd4cb975368543044eee3af99d10ea404b5709172"
+    },
+    "opusenc.dll": {
+      "size": 59368,
+      "hash": "b1577bc7996e602c1b5cce268b32df4f2b07e82308a88aab98cc84a8e30625de"
+    },
+    "PlayGTAV.exe": {
+      "size": 569464,
+      "hash": "1f78dbab6ab8d756ea394df5fd387f0e9540d55a59a674de45efadd1d7efeeb0"
+    },
+    "steam_api64.dll": {
+      "size": 239904,
+      "hash": "f12cf470954d9d956f7d44f9eb84659890c5722a021548ab88710340c0965230"
+    },
+    "title.rgl": {
+      "size": 1920,
+      "hash": "4c4963234c6c417b8bafa406693bff7cd1466b7302b6aa06e1d71acb47d89085"
+    },
+    "version.txt": {
+      "size": 9,
+      "hash": "186925f847137bfc5516ba5da4cd7fe9bab9cba606269815156ca4dbc10ec31e"
+    },
+    "versioninfo.txt": {
+      "size": 545,
+      "hash": "4014eb4bb333a05bca794423999a7eb6265d4a25650eb018cc5cd6127090243a"
+    },
+    "x64a.rpf": {
+      "size": 48707584,
+      "hash": "0851ab916bbf058124cf1160683af12f8ffc544f4daedc030aac1c7925e99d94"
+    },
+    "x64b.rpf": {
+      "size": 149448704,
+      "hash": "bf8a6f5ce31a090875cdfbc31d08a8e54df2c539fac92ab3f7dde67c9a38238d"
+    },
+    "x64c.rpf": {
+      "size": 2196207616,
+      "hash": "097949cc8268cce0166c81dad942c1f7f89661593580236c020a66d03b746b8b"
+    },
+    "x64d.rpf": {
+      "size": 1804668928,
+      "hash": "68f4da3e1d92808a1fc5daf6349f515dc35f0ab36f1458ec82891fd23d1b7ae9"
+    },
+    "x64e.rpf": {
+      "size": 2115954688,
+      "hash": "a2a5eb2a03053a9523dd3af218931b7f771a7ac5ca0a371f16fa639382656bec"
+    },
+    "x64f.rpf": {
+      "size": 1028757504,
+      "hash": "fc1829ca1504a346f8d158ada61c7b847e2e5faf53171419d8b174b26ba01af0"
+    },
+    "x64g.rpf": {
+      "size": 2552596480,
+      "hash": "20e0d653d1916ea20684964e91f1bb52ae62183ebf28bfe8671a51d8f8eb9ea0"
+    },
+    "x64h.rpf": {
+      "size": 1699563520,
+      "hash": "2741d8a70944a1562cfe66cd515189bfd999886d6bd2521f62681e3092a15bcd"
+    },
+    "x64i.rpf": {
+      "size": 1787043840,
+      "hash": "7e56a4af3e4a0d73a11079194d0e4693c1ef1aa2ff1ac7905761aa2a2a685543"
+    },
+    "x64j.rpf": {
+      "size": 2109519872,
+      "hash": "51433a5a24e3337eb3858b9360b6c9b55d1510eebe4f1da1790fe7a94238a2e8"
+    },
+    "x64k.rpf": {
+      "size": 2365648896,
+      "hash": "637fed46bb641377ff5bd55ed4b1f543d197298720ac72c117fbd5142b9002be"
+    },
+    "x64l.rpf": {
+      "size": 2577571840,
+      "hash": "01cd72f8862d0e686ae9743bac6215095104c586598ffee783a96cb9dabb7105"
+    },
+    "x64m.rpf": {
+      "size": 1807249408,
+      "hash": "22ae3aff1afddb5f6f31e291fe9130bedf1d808e890325f70757f9077b5ed266"
+    },
+    "x64n.rpf": {
+      "size": 1638481920,
+      "hash": "92f72601518aabb01998811f0bfea3f4e261ffd9c50e9ebe4a14a1de089040fc"
+    },
+    "x64o.rpf": {
+      "size": 1758345216,
+      "hash": "ad5e223ab8949762ca4e7adea17850f5c4f1000d77dfac66c40bfe42df91de6f"
+    },
+    "x64p.rpf": {
+      "size": 1428606976,
+      "hash": "cf91a0c21045402deb1ce749b0b67d322fa60cdc4f554588a3a72d02d9c39bee"
+    },
+    "x64q.rpf": {
+      "size": 2823614464,
+      "hash": "cdf36e81ff435d736ef4f54bcbaf8faf43baa57b0ae59c8cca7dcb06b02cb6b2"
+    },
+    "x64r.rpf": {
+      "size": 1711259648,
+      "hash": "d426fd940868ab6e2dea05e79fa7a75c1f92d4788e1e84526c92d9b3627fb0f2"
+    },
+    "x64s.rpf": {
+      "size": 1646266368,
+      "hash": "0d0b28ec82bbee87acd9bdad3356a66d5d09dbd1fe7c9be67f1d4719ff0ed9ff"
+    },
+    "x64t.rpf": {
+      "size": 1924630528,
+      "hash": "8a8fe487c688c0747b2290194bcb24638ad57df4166fc62db816eeeee1024cdc"
+    },
+    "x64u.rpf": {
+      "size": 1354405888,
+      "hash": "824a2643be7ac251d281027cf380999bc27169d6d8be22fb31def7ff2108dc09"
+    },
+    "x64v.rpf": {
+      "size": 1942046720,
+      "hash": "6df3454d01f632895d69998355c084bd3176e211df50954b770a5d22de89cb53"
+    },
+    "x64w.rpf": {
+      "size": 937340928,
+      "hash": "388aae7823b78790387db1b17c77df961171dceaba71967fa9cb7e08238bcc20"
+    },
+    "XCurl.dll": {
+      "size": 198240,
+      "hash": "736218b8e504f7c8cce1111c41f79b2608fd85f614b758aaf7b8e9095536b819"
+    },
+    "zlib1.dll": {
+      "size": 99304,
+      "hash": "74920a4f376fbeef8888cb3c3a78c2f9c7e599593aba003d94c0feb1e6f7a771"
+    },
+    "BattlEye\\BEClient_x64.cfg": {
+      "size": 33,
+      "hash": "b3341d75d5c81454442cf2050cd9c7b41d609ff681f32ee69357d43ac28777e0"
+    },
+    "BattlEye\\BEClient_x64.dll": {
+      "size": 10312488,
+      "hash": "87c13eafe7fcd831df5834749e68cb9fbf57896074263c93f7c7392451dc21eb"
+    },
+    "BattlEye\\BELauncher.ini": {
+      "size": 94,
+      "hash": "ef76de483a272589fded51efa92250b46183a425ed68729d9e1ccbd5eac5bbc3"
+    },
+    "BattlEye\\BEServer_x64.cfg": {
+      "size": 33,
+      "hash": "b3341d75d5c81454442cf2050cd9c7b41d609ff681f32ee69357d43ac28777e0"
+    },
+    "BattlEye\\BEServer_x64.dll": {
+      "size": 402216,
+      "hash": "b84591d8763ba845337da8926d27a2f3a74b5c3bc4e9474b9e0431295127a9d5"
+    },
+    "BattlEye\\BEService_x64.exe": {
+      "size": 18663720,
+      "hash": "1d325b52b55fe35997a5669ed609d1c8877b7fb1edf599aa736a0fd86704395a"
+    },
+    "BattlEye\\Licenses.txt": {
+      "size": 1128,
+      "hash": "dc205020ac6d3b4e50c864f23e1453fc543218cc357d2016bf18b4b68df6b3ea"
+    },
+    "BattlEye\\EULA\\cs.txt": {
+      "size": 3368,
+      "hash": "d90f549fce55c4f64c13e5c1921f920338ccf3806fee987888632bca6f3ae5d0"
+    },
+    "BattlEye\\EULA\\de.txt": {
+      "size": 3417,
+      "hash": "e6ef6041e9ad0d4cd6e6f300a32c17ee877cc45cf556579079a86180d258cfef"
+    },
+    "BattlEye\\EULA\\en.txt": {
+      "size": 2758,
+      "hash": "160cf73c53860a72b6c4aaf9617f27721bc535064dba63125281bbf6d4cd03f2"
+    },
+    "BattlEye\\EULA\\es.txt": {
+      "size": 3260,
+      "hash": "1ffe31a0a0fe62a92751c3c6eb102d2c14bf41ae3276eee5ee36b368c8f9306e"
+    },
+    "BattlEye\\EULA\\fr.txt": {
+      "size": 3390,
+      "hash": "0d146c9c38c22ae292f8f7b68994dd595bcbf1f832e831ffc38dbde65b428bf6"
+    },
+    "BattlEye\\EULA\\it.txt": {
+      "size": 3158,
+      "hash": "5d529c2f0572c2c147325a6f49ac1f0987671b08b56bed2884058ff2b01224e8"
+    },
+    "BattlEye\\EULA\\ja.txt": {
+      "size": 4036,
+      "hash": "2a7d5666c41335b970634782eb97dbb22ec9ec0f08e1c829dd7e5827756e5351"
+    },
+    "BattlEye\\EULA\\ko.txt": {
+      "size": 3618,
+      "hash": "abc5cc57f549e3ea479413ee2fc46c1be10c32f095e666097eb97ff48e460005"
+    },
+    "BattlEye\\EULA\\nl.txt": {
+      "size": 3363,
+      "hash": "8f9bc6625f88b9cdc21f039c130cb9c6f582b06a96ee9906a1da91ffe893efdd"
+    },
+    "BattlEye\\EULA\\pl.txt": {
+      "size": 3332,
+      "hash": "2eff6616956761372e2a38f64450c7cd6bac28a10895faf869860cea0a0be59e"
+    },
+    "BattlEye\\EULA\\pt.txt": {
+      "size": 3152,
+      "hash": "57b92735230b28524ad02322003cd65b39bfa74cb31004e6a598a1318b3c0ca7"
+    },
+    "BattlEye\\EULA\\ru.txt": {
+      "size": 5543,
+      "hash": "d0fc14bbe99ea48b330a2b17983031bd78f9055a87f4c4a3bcc3b3d2dce29fb9"
+    },
+    "BattlEye\\EULA\\tr.txt": {
+      "size": 3272,
+      "hash": "f55c868489f492daf2b7c80e89c7a22f979236f95477cdced3ea95b1a1907b46"
+    },
+    "BattlEye\\EULA\\zh-TW.txt": {
+      "size": 2440,
+      "hash": "c3c40b41b648e0f352a9cf9dc4958036db010025e6e2e2daa338081cae013652"
+    },
+    "BattlEye\\EULA\\zh.txt": {
+      "size": 2488,
+      "hash": "717558c07052f99da0ef0ad1e03660f8692c73df9d203bc0f4a88c91388af140"
+    },
+    "BattlEye\\Privacy\\cs.txt": {
+      "size": 1549,
+      "hash": "e62b426c97fabbaa9112f05dd938c8a975ababf8d372d96cb50dc0d33a9f7edc"
+    },
+    "BattlEye\\Privacy\\de.txt": {
+      "size": 1479,
+      "hash": "a06a4c134034f3534eed1c821685fa1e93ea8b713059c8d06656b20eb8a1228b"
+    },
+    "BattlEye\\Privacy\\en.txt": {
+      "size": 1318,
+      "hash": "73847510dacd5c4196d52651d1a4d867c6b8918784bb8ec09b70c1bb8e7f95de"
+    },
+    "BattlEye\\Privacy\\es.txt": {
+      "size": 1578,
+      "hash": "b916db9c2cef426aa8dcbe629e1e020a119b0176ebc24c46d910416497aeba4b"
+    },
+    "BattlEye\\Privacy\\fr.txt": {
+      "size": 1601,
+      "hash": "ace3ff76bd671f7257599df8bf47bf38572e6f284b87aec922e4b5be5efbf7b9"
+    },
+    "BattlEye\\Privacy\\it.txt": {
+      "size": 1473,
+      "hash": "984e5c00705ff8180528d79389461e51830e619ff747f75603eeb5c9d0dfdd28"
+    },
+    "BattlEye\\Privacy\\ja.txt": {
+      "size": 1720,
+      "hash": "e3f12d52bb501c671bc86e130442ddcbef498909b5066fe371d59da2792c7401"
+    },
+    "BattlEye\\Privacy\\ko.txt": {
+      "size": 1510,
+      "hash": "c888f6b1a416eb8c1567ebce64103057ebfb98a30a88a05e692d028fbe5c7a45"
+    },
+    "BattlEye\\Privacy\\nl.txt": {
+      "size": 1403,
+      "hash": "cd868b3d5f2065e94ef0983063478a8ff182e5147a48ad1a43e9c309bcfc25e9"
+    },
+    "BattlEye\\Privacy\\pl.txt": {
+      "size": 1539,
+      "hash": "abfed8e1da9866c3ee16e1d15f93679c300d6ca97a395f2fadae983e608f3110"
+    },
+    "BattlEye\\Privacy\\pt.txt": {
+      "size": 1565,
+      "hash": "d2a2423d1485626f6cf75c74e0170a3c71ae9c55a22f799e6eeb2bc6f8db6286"
+    },
+    "BattlEye\\Privacy\\ru.txt": {
+      "size": 2500,
+      "hash": "b6e93df760391b198c301a207b5bf7db9efaf30aef68305bef142cb0dd1609a6"
+    },
+    "BattlEye\\Privacy\\tr.txt": {
+      "size": 1422,
+      "hash": "4d2d4c709108ade995fc79f95b64fa91c918235288c844e2d89808c3f1adac98"
+    },
+    "BattlEye\\Privacy\\zh-TW.txt": {
+      "size": 1115,
+      "hash": "758041c2f5a7e515f2069afead821bbd61ff9264a6cbc478b20eaeafcfd88952"
+    },
+    "BattlEye\\Privacy\\zh.txt": {
+      "size": 1109,
+      "hash": "e92a498947066037cba7cff45296641a70621803ef94e0545b76ae5a208dddb2"
+    },
+    "BattlEye\\Text\\cs.ini": {
+      "size": 3192,
+      "hash": "9c1a43cfe67a367b7462a3b43f964feb6406c93fd37324ef85eb3511da5e27f1"
+    },
+    "BattlEye\\Text\\de.ini": {
+      "size": 3283,
+      "hash": "fcc1bf3aecab2a7f259f247cc8af4f7436ab6f966408f81de2c6ef315f57fdfa"
+    },
+    "BattlEye\\Text\\en.ini": {
+      "size": 2748,
+      "hash": "ecbf28daba8fb16515ea349e4eecb362bfd4a0b4c33edee0e8e98e37adecebd0"
+    },
+    "BattlEye\\Text\\es.ini": {
+      "size": 3082,
+      "hash": "8b9fe0d5dc427b7262b569e2f3359c5bc7f4a897ca08d50294ca0e7654b45924"
+    },
+    "BattlEye\\Text\\fr.ini": {
+      "size": 3245,
+      "hash": "8669beb8c18485f1d9563853f90db170d3259f3e8da24c639df049275daa5167"
+    },
+    "BattlEye\\Text\\it.ini": {
+      "size": 3014,
+      "hash": "b0c634996131d9cf1a6000dc2592265688a3071cce7f909429870cfc70937032"
+    },
+    "BattlEye\\Text\\ja.ini": {
+      "size": 4122,
+      "hash": "a40cd51abb3d2b1dca8beab83a57deaa3cf00833d34a8c3fec8d03b2d046aa6c"
+    },
+    "BattlEye\\Text\\ko.ini": {
+      "size": 3358,
+      "hash": "103592abb3db4c259edb52c38d7377ebe278aa431b69ce4dada7ea69d6730e2a"
+    },
+    "BattlEye\\Text\\nl.ini": {
+      "size": 3004,
+      "hash": "763e25bc1f28be5901b8692cf614cdc305a4d87989229a6f964dd6eb2f3853e2"
+    },
+    "BattlEye\\Text\\pl.ini": {
+      "size": 3170,
+      "hash": "f590f86b924e4b889365018b1b3d03f135ad75acd468861882193199d361569d"
+    },
+    "BattlEye\\Text\\pt.ini": {
+      "size": 2978,
+      "hash": "7ccfd7020500f8a4ccf2919778821bcad67def2a15d816f4cb0090e929108b2d"
+    },
+    "BattlEye\\Text\\ru.ini": {
+      "size": 4814,
+      "hash": "be623574e9f5ca52c6cc75acf76fb4da88e4f5b7958f3b85427428daa143cb31"
+    },
+    "BattlEye\\Text\\tr.ini": {
+      "size": 2990,
+      "hash": "45a31e07913e88213d7dc4134d5fb5c12cf97b8ed44aa79636730c8c8b0b23a1"
+    },
+    "BattlEye\\Text\\zh-TW.ini": {
+      "size": 2684,
+      "hash": "bd10ebc03c908936415f16b57e1ee6402eb40fef02427b5b1b7135ae70b20bbd"
+    },
+    "BattlEye\\Text\\zh.ini": {
+      "size": 2631,
+      "hash": "7b909bf625b6dccf94f10b52681ce7835f56212d3db5b3cda257ae900f74b688"
+    },
+    "enbseries\\intlightsprite.fx.ini": {
+      "size": 143,
+      "hash": "647e9f874376da493b237d4cf193d5444b75fe364dd24f6e77c4262edb8cb7b0"
+    },
+    "enbseries\\_weatherlist.ini": {
+      "size": 12475,
+      "hash": "b006a7c29583e9d086749ac3fc4165991097c3aeb54ca9c3158ce885fd65f287"
+    },
+    "Redistributables\\Rockstar-Games-Launcher.exe": {
+      "size": 112102008,
+      "hash": "51afae4b364112286fda8abeeda64867830792d6134ab6cf2d54bfbb8d21ece7"
+    },
+    "Redistributables\\Social-Club-Setup.exe": {
+      "size": 127419512,
+      "hash": "8c057d4199ded0bd70e2f769548dd97bec9e0e89a27109d61026b286d79c7cb5"
+    },
+    "update\\update.rpf": {
+      "size": 2010816512,
+      "hash": "089f0824689bf9fea508eedccafa67d07fd6b48644514d3b3e9359ae8d06a40f"
+    },
+    "update\\update2.rpf": {
+      "size": 494157824,
+      "hash": "04b4bb4529faac418bc2d30d80dac40a8063e746831cdd3f1fcba7cc3fdd0868"
+    },
+    "update\\x64\\metadata.dat": {
+      "size": 1075109,
+      "hash": "ca4310dd7a07c50ac5051b36b3f9984390e074ddd119b8e98627a164beecbdee"
+    },
+    "update\\x64\\data\\errorcodes\\american.txt": {
+      "size": 24639,
+      "hash": "da57f694151fe9aa646ab711aeae69b489a9426b595d4f0cc811bf18d512b545"
+    },
+    "update\\x64\\data\\errorcodes\\chinese.txt": {
+      "size": 25427,
+      "hash": "185245eecbbc5ef8c6d222c308b1d86e7fc9c891010a874823f43e7320461e7e"
+    },
+    "update\\x64\\data\\errorcodes\\chinesesimp.txt": {
+      "size": 24696,
+      "hash": "262422ff381c7cd4cac6b47cc0e563b0232ae150711b4ab71120ab5c21b4ea5e"
+    },
+    "update\\x64\\data\\errorcodes\\french.txt": {
+      "size": 27649,
+      "hash": "6c220ba298c6f6978b80274eb8da1befa6aab65843ceb8581248f1f1ad65637d"
+    },
+    "update\\x64\\data\\errorcodes\\german.txt": {
+      "size": 28247,
+      "hash": "42fa1a50c1c18926df34f26784058f18f0c3ebcb7d210348f8200aef921253fe"
+    },
+    "update\\x64\\data\\errorcodes\\italian.txt": {
+      "size": 26740,
+      "hash": "8f18ae666ac1264e90e0a976d357507dc03d0703cb1a34c144314029ddb7578f"
+    },
+    "update\\x64\\data\\errorcodes\\japanese.txt": {
+      "size": 38731,
+      "hash": "bd97de1473cac56072172d8ee76379a684bfa970b0f53baa816eb83814db87ae"
+    },
+    "update\\x64\\data\\errorcodes\\korean.txt": {
+      "size": 34074,
+      "hash": "47bb0734bced2ab20a855b6b6d66609b8a788d14b822c1356016fe6160a40e3f"
+    },
+    "update\\x64\\data\\errorcodes\\mexican.txt": {
+      "size": 26717,
+      "hash": "65d556e89d3a4f18327d4b89e39bf4ddc8a594121b12b5917b5c75ec40953ccb"
+    },
+    "update\\x64\\data\\errorcodes\\polish.txt": {
+      "size": 26259,
+      "hash": "fcf714cefd15d8162128ea0c69112d4eb5afc506e3353d51b4fb74142dbbc1c6"
+    },
+    "update\\x64\\data\\errorcodes\\portuguese.txt": {
+      "size": 28511,
+      "hash": "00758cdb2cb0b9ae380b8f546a533f3f057b3f848500a5fbd7c84d125b34caff"
+    },
+    "update\\x64\\data\\errorcodes\\russian.txt": {
+      "size": 49102,
+      "hash": "5919c2cb0762875c03d7406f3c57a90b69312d985301404d2d5c4a1b1deb0f87"
+    },
+    "update\\x64\\data\\errorcodes\\spanish.txt": {
+      "size": 29218,
+      "hash": "415794ce3561de69659cae3792374168be9ded43bbc39f76b54639fefd6c71b5"
+    },
+    "update\\x64\\dlcpacks\\mp2023_01\\dlc.rpf": {
+      "size": 809424896,
+      "hash": "7e7a37d637640fb462b80749e6f11b12da94e8cda0a706a0d5f2f345fdf4f6a8"
+    },
+    "update\\x64\\dlcpacks\\mp2023_01_g9ec\\dlc.rpf": {
+      "size": 1464320,
+      "hash": "7a1c997ff72c38b39528cf92f2af9acd0221d17a63a1752d061aa9fd67ce60e8"
+    },
+    "update\\x64\\dlcpacks\\mp2023_02\\dlc.rpf": {
+      "size": 1604741120,
+      "hash": "f138475cc7ca7d9a55a137be68b8fd9377f7b6af53bdfdaaf3b40924e4e2d19b"
+    },
+    "update\\x64\\dlcpacks\\mp2023_02_g9ec\\dlc.rpf": {
+      "size": 417792,
+      "hash": "0606eee689483708506d49cf8fc8d801010997830a53634d50a7eeab2aa8e7ea"
+    },
+    "update\\x64\\dlcpacks\\mp2024_01\\dlc.rpf": {
+      "size": 1178773504,
+      "hash": "8c51cd4666e0c34ebcdefaaa1a34d133b96b88a38ce0b6771c39164564a665e2"
+    },
+    "update\\x64\\dlcpacks\\mp2024_01_g9ec\\dlc.rpf": {
+      "size": 23519232,
+      "hash": "bcfcc22dd0a2fc056077b0ca74b5750ab624faf106e348c85ebf25efafeb54c4"
+    },
+    "update\\x64\\dlcpacks\\mp2024_02\\dlc.rpf": {
+      "size": 1183961088,
+      "hash": "600676baecfc1ec9bfa8c9917e5bec6da64c9e081bda382e20848508e56f0405"
+    },
+    "update\\x64\\dlcpacks\\mp2024_02_g9ec\\dlc.rpf": {
+      "size": 55296,
+      "hash": "7e9d947652a46d63d16553a9644eae34b5a9c282b91bf7f163dded4262e93a69"
+    },
+    "update\\x64\\dlcpacks\\mp2025_01\\dlc.rpf": {
+      "size": 1793306624,
+      "hash": "bc10bd4c5d0f819d65e9cb0cb2fb20c642e12b5de02452765caa5c699b3ac32f"
+    },
+    "update\\x64\\dlcpacks\\mp2025_01_G9EC\\dlc.rpf": {
+      "size": 57344,
+      "hash": "f27c8c49d4a602479252d19e827121ce76618d7210b3a03d14865c8d543c7c40"
+    },
+    "update\\x64\\dlcpacks\\mp2025_02\\dlc.rpf": {
+      "size": 1905895424,
+      "hash": "199d3a6c4a8945d494873a767af3e914ee510ab9948772fe01b2290d96b2a84b"
+    },
+    "update\\x64\\dlcpacks\\mp2025_02_g9ec\\dlc.rpf": {
+      "size": 65536,
+      "hash": "c19b4a68abd8623c1ac40e87aeac52880e918c2e34c71e0a46a2ca66170d99dc"
+    },
+    "update\\x64\\dlcpacks\\mpairraces\\dlc.rpf": {
+      "size": 82458624,
+      "hash": "b3cbb8976349424a8830789812ff39b8274e30baef06782a057ebf3667b0cb2c"
+    },
+    "update\\x64\\dlcpacks\\mpapartment\\dlc.rpf": {
+      "size": 636985344,
+      "hash": "7f22e78cb658713de3b64e0f287fb2af129aa5fc9f156d6c10fcfa3c19f7bcc8"
+    },
+    "update\\x64\\dlcpacks\\mpassault\\dlc.rpf": {
+      "size": 314443776,
+      "hash": "9a19ddb067f16732dc59cc9b38e824b822c4e1ed5c09d45e02f2975d879e0cf1"
+    },
+    "update\\x64\\dlcpacks\\mpbattle\\dlc.rpf": {
+      "size": 3981039616,
+      "hash": "951e30686dd4283858f0b1d4634990536db8c5c21e12baec244b184213259eee"
+    },
+    "update\\x64\\dlcpacks\\mpbattle\\dlc1.rpf": {
+      "size": 992296960,
+      "hash": "a7218df8e69963a204c1d5c377b065958bb2b6ffa30d7861eecff420f3c86296"
+    },
+    "update\\x64\\dlcpacks\\mpbiker\\dlc.rpf": {
+      "size": 1794048000,
+      "hash": "5c5d3aa13a5b3ad417199470b371ae8349df7a8f8f1982083e61878bae5b6199"
+    },
+    "update\\x64\\dlcpacks\\mpchristmas2\\dlc.rpf": {
+      "size": 63940608,
+      "hash": "6e78664135de4ada86ab53595b41675650a34c8a4cd1c3cbec669abad2376ce9"
+    },
+    "update\\x64\\dlcpacks\\mpchristmas2017\\dlc.rpf": {
+      "size": 2406123520,
+      "hash": "1e4e8fd648983a75ba64138680b0fc6d2be4157a6049a2ca45fcb563d84dad82"
+    },
+    "update\\x64\\dlcpacks\\mpchristmas2018\\dlc.rpf": {
+      "size": 3247781888,
+      "hash": "ee8a091a198b7b6015723cb9c521c17d21c7ac5dc3ffa2281c59bb8db7f35aaf"
+    },
+    "update\\x64\\dlcpacks\\mpchristmas3\\dlc.rpf": {
+      "size": 1822871552,
+      "hash": "d0514a348cf18bd73f588afa0a5db95d6081daa95f72bd1eac6a361860ddb705"
+    },
+    "update\\x64\\dlcpacks\\mpchristmas3_g9ec\\dlc.rpf": {
+      "size": 120832,
+      "hash": "120bcc4132d8ce9f5236899070d501dfd7561d5a2e8bf1d1f690d0d6c1887a53"
+    },
+    "update\\x64\\dlcpacks\\mpexecutive\\dlc.rpf": {
+      "size": 801568768,
+      "hash": "4bb365fdf669edd7b88c41c9b3e136cccca23430f6b5988e826f44ace646bd0a"
+    },
+    "update\\x64\\dlcpacks\\mpg9ec\\dlc.rpf": {
+      "size": 1847296,
+      "hash": "b7f63d0548f0e2bdfc64e15cd097acd572759cd4ddedd8e505c3d4ebf2f93cff"
+    },
+    "update\\x64\\dlcpacks\\mpgunrunning\\dlc.rpf": {
+      "size": 1879756800,
+      "hash": "da4c6439b4a2134ca73e7ce55626465fa8f3d0f42569b93fde55c316ccabfff1"
+    },
+    "update\\x64\\dlcpacks\\mphalloween\\dlc.rpf": {
+      "size": 104658944,
+      "hash": "73698d964a83e8a0a7c81c01e4aa2bae877dca7878e26b60764008b062efae4a"
+    },
+    "update\\x64\\dlcpacks\\mpheist\\dlc.rpf": {
+      "size": 3052763136,
+      "hash": "17c2fd809949f00107a71d7dbcd5533727f080891d3723417b2e25c53f9b7ad5"
+    },
+    "update\\x64\\dlcpacks\\mpheist3\\dlc.rpf": {
+      "size": 2377840640,
+      "hash": "bcc5759ed41f8109c6b5330431228a2891707f848574bfa9ea37639a4a68f0eb"
+    },
+    "update\\x64\\dlcpacks\\mpheist4\\dlc.rpf": {
+      "size": 3452489728,
+      "hash": "bfd49f78864db09f7907d512ff7cc6a70170f9b75c287010996ad0ee831e1090"
+    },
+    "update\\x64\\dlcpacks\\mpheist4\\dlc1.rpf": {
+      "size": 3469754368,
+      "hash": "a2551afdc347c9d197b8ee507f32e1f2c0f12e741bf495b178d287cd84070875"
+    },
+    "update\\x64\\dlcpacks\\mpheist4\\dlc2.rpf": {
+      "size": 1352189952,
+      "hash": "9f6550f7a59a8f37f6c59a1fb306af76b428c9cc676bb7416513437e398bc31b"
+    },
+    "update\\x64\\dlcpacks\\mpimportexport\\dlc.rpf": {
+      "size": 915310592,
+      "hash": "fe044c0b00f6aadd765e3a386753f427684279b5fa677b16586c7943b99a5524"
+    },
+    "update\\x64\\dlcpacks\\mpjanuary2016\\dlc.rpf": {
+      "size": 149415936,
+      "hash": "5c1f4819226bbc34b47973ffe447634bb18123f1b1b1b561ab94df1ce7bcdcb4"
+    },
+    "update\\x64\\dlcpacks\\mplowrider\\dlc.rpf": {
+      "size": 1088813056,
+      "hash": "33c291e193757497d3ed82fc89756d89589697be9d4af55a4b9ef3228fac61ed"
+    },
+    "update\\x64\\dlcpacks\\mplowrider2\\dlc.rpf": {
+      "size": 334028800,
+      "hash": "598cd039642cc71b2beb6eb84d1d413f47a4ee38b417106f9f3eb7d7e53cce27"
+    },
+    "update\\x64\\dlcpacks\\mpluxe\\dlc.rpf": {
+      "size": 226260992,
+      "hash": "61fc4d347b8729ed2b2957fac29d86b25265a24995d640fca5768c8fd1b72450"
+    },
+    "update\\x64\\dlcpacks\\mpluxe2\\dlc.rpf": {
+      "size": 105105408,
+      "hash": "b4f805690a2502b52b5fbca5634696b120b3b7246fcdb75a78ef126922d99cf8"
+    },
+    "update\\x64\\dlcpacks\\mppatchesng\\dlc.rpf": {
+      "size": 437524480,
+      "hash": "903165ee1bace898f3de5985448074257f1242450d07b1ecbe6fe810781bec79"
+    },
+    "update\\x64\\dlcpacks\\mpreplay\\dlc.rpf": {
+      "size": 429932544,
+      "hash": "fb97cdb8b31d390649115d6cc7a20f941dfc7dcbd7c0a055307ca8c9dc817674"
+    },
+    "update\\x64\\dlcpacks\\mpsecurity\\dlc.rpf": {
+      "size": 1978963968,
+      "hash": "7704d57c5e6f22be3b48c70f7a487a2d2dbb32af96f9f90e209050fee637b7a7"
+    },
+    "update\\x64\\dlcpacks\\mpsecurity\\dlc1.rpf": {
+      "size": 1308874752,
+      "hash": "b245e46067a14db751c274553278f73340f72ae694da68014422eacaf25cf2f3"
+    },
+    "update\\x64\\dlcpacks\\mpsmuggler\\dlc.rpf": {
+      "size": 973670400,
+      "hash": "1c2aade2db13d02b0ab403772ee1d01069a771a875a51504288ff21e43acb552"
+    },
+    "update\\x64\\dlcpacks\\mpspecialraces\\dlc.rpf": {
+      "size": 78448640,
+      "hash": "4ab97386f6ce2062bc333ff3e55aa05bed5b756dd7bc7164e26ae090dfa3995c"
+    },
+    "update\\x64\\dlcpacks\\mpstunt\\dlc.rpf": {
+      "size": 348047360,
+      "hash": "9109557a3cb5379d26714633c16d4951d0d5b394aa147ae53a4e00c8bd991f6c"
+    },
+    "update\\x64\\dlcpacks\\mpsum\\dlc.rpf": {
+      "size": 980621312,
+      "hash": "65fc2923f5fc5c9551f2a2215d6807f95a04d4147ab7abe45a6c821cddb28637"
+    },
+    "update\\x64\\dlcpacks\\mpsum2\\dlc.rpf": {
+      "size": 1245167616,
+      "hash": "7827d963a42dd276a9602223ad0b4bfade54c7770da32ad3acb3c831da86405a"
+    },
+    "update\\x64\\dlcpacks\\mpSum2_G9EC\\dlc.rpf": {
+      "size": 249856,
+      "hash": "39debd27077b26d9244922898ef89309ceaf68c9021dc140e173e7b0b378fb3f"
+    },
+    "update\\x64\\dlcpacks\\mptuner\\dlc.rpf": {
+      "size": 3482869760,
+      "hash": "8a958cf5e6716255ae334be393e9237f1436b35c588307787992b44841087c48"
+    },
+    "update\\x64\\dlcpacks\\mptuner\\dlc1.rpf": {
+      "size": 47536128,
+      "hash": "53aee3f7fd4085c7791e3e3ca1289be746db95f14d3ec3b17d79fa50404236a7"
+    },
+    "update\\x64\\dlcpacks\\mpvalentines2\\dlc.rpf": {
+      "size": 25073664,
+      "hash": "3b696a186d3cda5960283a02b2bd24ceacd9b1077b6329e41e5c8f9ff4d7cc2e"
+    },
+    "update\\x64\\dlcpacks\\mpvinewood\\dlc.rpf": {
+      "size": 1694519296,
+      "hash": "a496af6f14e6877e804f11eb01ba71a1ba06ee8db8fb1f7f45fcfc0e3070de96"
+    },
+    "update\\x64\\dlcpacks\\mpxmas_604490\\dlc.rpf": {
+      "size": 46061568,
+      "hash": "3e9465625a80fb3791d3992a9b93e21647da171e704bc6e9a7d726dd78493a68"
+    },
+    "update\\x64\\dlcpacks\\NVE\\dlc.rpf": {
+      "size": 1944397312,
+      "hash": "776899fc89455d397f62c3fb2bf230ffa65f7efa1be3eec0d565eabe3b84d977"
+    },
+    "update\\x64\\dlcpacks\\NVE_2\\dlc.rpf": {
+      "size": 3688532480,
+      "hash": "a6377832acd447efe05fa7b16b587da7834a77e34eab3a65bb9709240300c9b2"
+    },
+    "update\\x64\\dlcpacks\\NVE_3\\dlc.rpf": {
+      "size": 3980505600,
+      "hash": "962cc8bbc7a9141d5115556962e62765965b9c5691f0510241db10e47ec0efb5"
+    },
+    "update\\x64\\dlcpacks\\NVE_carcols\\dlc.rpf": {
+      "size": 590848,
+      "hash": "204d798e70d3157af5d6c93084aaa3eef6c9dd6fc74f817f4dcab0a5a372cb38"
+    },
+    "update\\x64\\dlcpacks\\NVE_chiliad\\dlc.rpf": {
+      "size": 195769344,
+      "hash": "280f86267b52d890f027102b29bc25fd47a23d365897e16949994210b7d2e0a9"
+    },
+    "update\\x64\\dlcpacks\\NVE_colors\\dlc.rpf": {
+      "size": 182784,
+      "hash": "362e61a013387dc34ba4ffba89488f25eddd3b4155edd72e9ee8e01c5eb9de23"
+    },
+    "update\\x64\\dlcpacks\\NVE_damage_props\\dlc.rpf": {
+      "size": 88654848,
+      "hash": "8b027e4fc7e53dd24590b1dc3be4f7498f7fe393858f8d10103c942be7d5508a"
+    },
+    "update\\x64\\dlcpacks\\NVE_gas\\dlc.rpf": {
+      "size": 8245760,
+      "hash": "1c3965bcf5290be88e0175cc4829e1d227bef044f7510f7d01bb4794a9b5a3c0"
+    },
+    "update\\x64\\dlcpacks\\NVE_lights\\dlc.rpf": {
+      "size": 120676352,
+      "hash": "fef91c38f5e14b513a38cad14e6594175ffff2f27a1fe29f0fc8db618b1c9146"
+    },
+    "update\\x64\\dlcpacks\\NVE_lspd\\dlc.rpf": {
+      "size": 70450176,
+      "hash": "da9eac7525a7faaefab61612136c284f8d7899f417e7bb37dc291c5d93f51d9f"
+    },
+    "update\\x64\\dlcpacks\\NVE_patches\\dlc.rpf": {
+      "size": 54676480,
+      "hash": "53c285f2b14a97514f1491687ef18b5c3f0d85010855b7c842c1a66801123bf2"
+    },
+    "update\\x64\\dlcpacks\\NVE_props_addon\\dlc.rpf": {
+      "size": 37043712,
+      "hash": "8f1e23c4e1024953d1e50e2841ba061243106edb7e765cb7e6188e43d5fecaf4"
+    },
+    "update\\x64\\dlcpacks\\NVE_rain\\dlc.rpf": {
+      "size": 51538432,
+      "hash": "b9b7e01edb4587f529ba619e7b8de60d428c5f25c208f2d26bb85605579a4ca9"
+    },
+    "update\\x64\\dlcpacks\\NVE_vegetation\\dlc.rpf": {
+      "size": 309578752,
+      "hash": "cfd0666aa1e41071b0035c9fbd72796b64c46716add5d4eacc7f3f0f3eef2319"
+    },
+    "update\\x64\\dlcpacks\\NVE_vehicles\\dlc.rpf": {
+      "size": 639289344,
+      "hash": "669514315c65aa29ad102b3063703c0ddd01d13ce75c3e1c5fff1a5356b85798"
+    },
+    "update\\x64\\dlcpacks\\patch2023_01\\dlc.rpf": {
+      "size": 141535232,
+      "hash": "5f5936211e8f5ede236b5eb5afad5929f50ff6a256522c466d83989d44c3c5b0"
+    },
+    "update\\x64\\dlcpacks\\patch2023_01_g9ec\\dlc.rpf": {
+      "size": 14336,
+      "hash": "e0638a6098f36605ad8048dd9a21269817bf8c40d0584b32f7a597cacf289c37"
+    },
+    "update\\x64\\dlcpacks\\patch2023_02\\dlc.rpf": {
+      "size": 12335104,
+      "hash": "f05e9316b00039ea0011a18a364a17e2b2f34b8f925d3dd3ec17d1526c93d747"
+    },
+    "update\\x64\\dlcpacks\\patch2024_01\\dlc.rpf": {
+      "size": 353296384,
+      "hash": "a788cdaf74be320b81d4a68253ddca8622cdc4c6a8ee72e174a3d5f167b14628"
+    },
+    "update\\x64\\dlcpacks\\patch2024_01_g9ec\\dlc.rpf": {
+      "size": 40960,
+      "hash": "379a56bb52b9a880b84e2ea3964cd769f0a5f6bd0cf8dfdaa5d643f65aab170e"
+    },
+    "update\\x64\\dlcpacks\\patch2024_02\\dlc.rpf": {
+      "size": 239130624,
+      "hash": "18176b03e609d12991d3c491bfc06b750e9323a43c81bd27c8377b295412eeff"
+    },
+    "update\\x64\\dlcpacks\\patch2025_01\\dlc.rpf": {
+      "size": 578166784,
+      "hash": "1c08b85d5eb3f286f97c130c5d36fac1c876ae6fae03331096c225bbf6cb688e"
+    },
+    "update\\x64\\dlcpacks\\patch2025_02\\dlc.rpf": {
+      "size": 329492480,
+      "hash": "808283fbef454dc44f845ac9f3f0a8e862de6fd34d1ed3715588bfc811852513"
+    },
+    "update\\x64\\dlcpacks\\patch2025_02_g9ec\\dlc.rpf": {
+      "size": 124928,
+      "hash": "b92bdb26c6a4ea5d4efb5215022fc93bb6a02bccb9a96eef791ba202f7b2abfe"
+    },
+    "update\\x64\\dlcpacks\\patchday10ng\\dlc.rpf": {
+      "size": 94134272,
+      "hash": "70e6cf1dccb82ee5605c8444f8ba05629d6cdf2603d167db4321d4e291af8ac0"
+    },
+    "update\\x64\\dlcpacks\\patchday11ng\\dlc.rpf": {
+      "size": 9955328,
+      "hash": "54aab351832d6fa3ffab96601b6b966802ea08d8fb44b4e1c1e7061db304547f"
+    },
+    "update\\x64\\dlcpacks\\patchday12ng\\dlc.rpf": {
+      "size": 155363328,
+      "hash": "006acf796aeb5f5153e8500f511ca15478fcfc8807ebd19e415d4316ecbf1aba"
+    },
+    "update\\x64\\dlcpacks\\patchday13ng\\dlc.rpf": {
+      "size": 144752640,
+      "hash": "79e77958cb3c7b955e5c28bf7f072c541fcea88b5235def24d0bde96fe499f25"
+    },
+    "update\\x64\\dlcpacks\\patchday14ng\\dlc.rpf": {
+      "size": 92930048,
+      "hash": "eb172583ecb187a310b80887c66b9d4da0d1f8580e79c5a095fb7d277ba6be4a"
+    },
+    "update\\x64\\dlcpacks\\patchday15ng\\dlc.rpf": {
+      "size": 47478784,
+      "hash": "8ad5cd5f2bf835f5a5f7965b0e91898dade52ca92d53ff0b5a1d7eaf5b9d73b4"
+    },
+    "update\\x64\\dlcpacks\\patchday16ng\\dlc.rpf": {
+      "size": 12083200,
+      "hash": "e0c478f03144dafdafad9f95fb50e1f440f4cb3d824236a4c645387b7519543f"
+    },
+    "update\\x64\\dlcpacks\\patchday17ng\\dlc.rpf": {
+      "size": 59975680,
+      "hash": "e17d93c414a9b9f3bcb21dcf92c2e558a10dc7692cbec35f9e6c254b1c0bc724"
+    },
+    "update\\x64\\dlcpacks\\patchday18ng\\dlc.rpf": {
+      "size": 4405248,
+      "hash": "6044e460bb3470dcf5a5d026844124f563f80d52f50e0b3e42e032c84b51f258"
+    },
+    "update\\x64\\dlcpacks\\patchday19ng\\dlc.rpf": {
+      "size": 765630464,
+      "hash": "301027f0aa16eef38055608f3e151c4b4e0670feedf5f6780223143f27bb4883"
+    },
+    "update\\x64\\dlcpacks\\patchday1ng\\dlc.rpf": {
+      "size": 467415040,
+      "hash": "219518f829ab0eef99f01101c0728437ec7ae671519cec7a1ac6090f9250e9be"
+    },
+    "update\\x64\\dlcpacks\\patchday20ng\\dlc.rpf": {
+      "size": 457129984,
+      "hash": "ab32285c0fff5925c601ef1ac2739238563e728fcf091c244b20b98cc0709d22"
+    },
+    "update\\x64\\dlcpacks\\patchday21ng\\dlc.rpf": {
+      "size": 1116868608,
+      "hash": "c0a164d11241ea1148f3c61e5a2f6ea61cb89105db8ff1041a30904f7ecc063f"
+    },
+    "update\\x64\\dlcpacks\\patchday22ng\\dlc.rpf": {
+      "size": 694106112,
+      "hash": "278d7a953915e58090b9a6c39bfc2a4685e3aca6339838821e60687d3485e577"
+    },
+    "update\\x64\\dlcpacks\\patchday23ng\\dlc.rpf": {
+      "size": 90695680,
+      "hash": "904a03bfe67c3489297af005c8e83ca2e8cbd819bca2db148e01acf1a3fc93a1"
+    },
+    "update\\x64\\dlcpacks\\patchday24ng\\dlc.rpf": {
+      "size": 384018432,
+      "hash": "cbe69a0106bef24286706c30e512b68ffef6159edc1aa42649f1c78b04676310"
+    },
+    "update\\x64\\dlcpacks\\patchday25ng\\dlc.rpf": {
+      "size": 94957568,
+      "hash": "162c5e7151f2854fa5d157c782cd89765b5fa64e98f068f05614e18fb5837d11"
+    },
+    "update\\x64\\dlcpacks\\patchday26ng\\dlc.rpf": {
+      "size": 529360896,
+      "hash": "59ff432bd23436744122348461a07632965b17d2396dc43426796f520e3a0100"
+    },
+    "update\\x64\\dlcpacks\\patchday27g9ecng\\dlc.rpf": {
+      "size": 262144,
+      "hash": "d814d1daef51ea949638ee9fc7b586dccec7cb64774383c8aaf7c0d8c713dcbf"
+    },
+    "update\\x64\\dlcpacks\\patchday27ng\\dlc.rpf": {
+      "size": 330080256,
+      "hash": "a6848db8c3c5e95282a8d221ba72889b560e649f887ca8c7149256d936bdf24f"
+    },
+    "update\\x64\\dlcpacks\\patchday28g9ecng\\dlc.rpf": {
+      "size": 6144,
+      "hash": "b6c48726d922beb198eb571300e1cee7871d09d6a38e5c29669f4c653319e9e8"
+    },
+    "update\\x64\\dlcpacks\\patchday28ng\\dlc.rpf": {
+      "size": 176656384,
+      "hash": "ed0cd7132c0d56756aaf03e4852fefb66f6e1ffdbfc14ad84daa846ae2dfe80d"
+    },
+    "update\\x64\\dlcpacks\\patchday2bng\\dlc.rpf": {
+      "size": 39548928,
+      "hash": "7f446ff14489e3fb83ca8334f41972b7cbf0f58e7df3a20a2818451873fc576b"
+    },
+    "update\\x64\\dlcpacks\\patchday2ng\\dlc.rpf": {
+      "size": 804900864,
+      "hash": "a9664cedda6b98aa20db11c5eefea6807497940210a324aa87ca765f41a1e1fb"
+    },
+    "update\\x64\\dlcpacks\\patchday3ng\\dlc.rpf": {
+      "size": 2253039616,
+      "hash": "1ea4b072b9b737470f73d578079c6616f3194bd9985bfe2347802c28a6cd135e"
+    },
+    "update\\x64\\dlcpacks\\patchday4ng\\dlc.rpf": {
+      "size": 312438784,
+      "hash": "49a2c65dfe8fe00b2427c193284d5bce20203b84915497f3c53b4e3bf3a2da3c"
+    },
+    "update\\x64\\dlcpacks\\patchday5ng\\dlc.rpf": {
+      "size": 7827456,
+      "hash": "1817c9f714b2ed0b96232f947730d7556045118f5404a1c9e60f60f6e1de71a4"
+    },
+    "update\\x64\\dlcpacks\\patchday6ng\\dlc.rpf": {
+      "size": 31907840,
+      "hash": "8c26035a27c3aaec7017708bd0efdb6cb743884be3ce3d6cd2ccae85d83983d8"
+    },
+    "update\\x64\\dlcpacks\\patchday7ng\\dlc.rpf": {
+      "size": 43843584,
+      "hash": "5e530afcf55e48fc2997d6fc883c5ebdb0e1d5856ee0c5b5f9d33b2e7aa0a7bd"
+    },
+    "update\\x64\\dlcpacks\\patchday8ng\\dlc.rpf": {
+      "size": 365328384,
+      "hash": "726ae224efc973b7607cc827ad96f8ae086fcc44e18ceca00576ea1637203bd0"
+    },
+    "update\\x64\\dlcpacks\\patchday9ng\\dlc.rpf": {
+      "size": 160524288,
+      "hash": "2279931f6140fcea462f17b152c40ddb871029032bb082c02b68a4404b17d5ae"
+    },
+    "update\\x64\\dlcpacks\\patchdayg9ecng\\dlc.rpf": {
+      "size": 16406528,
+      "hash": "a86c2c2ceb57f4788ef60887b639d050631f2ac2734b6668ef26ab0bd438535d"
+    },
+    "x64\\metadata.dat": {
+      "size": 1075109,
+      "hash": "ca4310dd7a07c50ac5051b36b3f9984390e074ddd119b8e98627a164beecbdee"
+    },
+    "x64\\audio\\audio_rel.rpf": {
+      "size": 3002368,
+      "hash": "6802a1bd350ec7d86e073a5038cb3829f8204d149c3a09aee4734cba9dcd9135"
+    },
+    "x64\\audio\\occlusion.rpf": {
+      "size": 692224,
+      "hash": "fc816467a98ae0b2b297f068435db7ff87bbd21c94c418e9113995c50e2e8222"
+    },
+    "x64\\audio\\sfx\\ANIMALS.rpf": {
+      "size": 661504,
+      "hash": "a574744efd42c9c331299c2a806fd57ad2279b2a151a9e4cff3fdbfb864857d3"
+    },
+    "x64\\audio\\sfx\\ANIMALS_FAR.rpf": {
+      "size": 22233088,
+      "hash": "d014b326fc85c0c1c7f3a5f371564ecde38a1d710d7d87f16210bc4fefc298e1"
+    },
+    "x64\\audio\\sfx\\ANIMALS_NEAR.rpf": {
+      "size": 64845824,
+      "hash": "772fd9cc8cc99052eba3162d1e1f6d6d8fa1a59515f77bfc5d713c71d087d2e4"
+    },
+    "x64\\audio\\sfx\\CUTSCENE_MASTERED_ONLY.rpf": {
+      "size": 1856481280,
+      "hash": "627e18160414a1eaaf841597b846fa45d2185807ba224e14bf1c1168d5eeb110"
+    },
+    "x64\\audio\\sfx\\DLC_GTAO.rpf": {
+      "size": 1423360,
+      "hash": "20877db0ea47be7678059afae07ec107b747744e5a3b4c92137d2d011934e657"
+    },
+    "x64\\audio\\sfx\\INTERACTIVE_MUSIC.rpf": {
+      "size": 2994292736,
+      "hash": "d9bc49de2f8657989e3f7e7033c8b357c16280b5af358b0787011bb3d9149c8d"
+    },
+    "x64\\audio\\sfx\\ONESHOT_AMBIENCE.rpf": {
+      "size": 69648384,
+      "hash": "85491e9056823480fd0e18bce6cadcba9f8c6826eb523f1059f317dfb4a36907"
+    },
+    "x64\\audio\\sfx\\PAIN.rpf": {
+      "size": 42629120,
+      "hash": "c3c161ed74e9eee13a89a5287a2700bf83849481ba85ac69eb58c20d99470575"
+    },
+    "x64\\audio\\sfx\\POLICE_SCANNER.rpf": {
+      "size": 68509696,
+      "hash": "7cfd7f18a24b1a8221490ba9016179ffefc55f8ca481b60cd3ba2e1ffc69190b"
+    },
+    "x64\\audio\\sfx\\PROLOGUE.rpf": {
+      "size": 46827520,
+      "hash": "f4f504027ce4016d9d03ba9ce5b7c15cc84d25fb3b95cea35c6005880049e5f0"
+    },
+    "x64\\audio\\sfx\\RADIO_01_CLASS_ROCK.rpf": {
+      "size": 475279360,
+      "hash": "f01ffae12e82f279a221d1fbbdb7a4b30c76a06a7e0b66def432718a68d2cc39"
+    },
+    "x64\\audio\\sfx\\RADIO_02_POP.rpf": {
+      "size": 502478848,
+      "hash": "8dae16e24dc391c37693b0c380f61ad74023761040fa6be665b8797802365aa3"
+    },
+    "x64\\audio\\sfx\\RADIO_03_HIPHOP_NEW.rpf": {
+      "size": 356595712,
+      "hash": "bb9960b927c60d440fd0613676f8c8be9aca065ba7c69534eba406db42eefd4f"
+    },
+    "x64\\audio\\sfx\\RADIO_04_PUNK.rpf": {
+      "size": 148889600,
+      "hash": "80603adf78246f7f1b85451818415d6e6d8f241bfbb05060d231b1ca110d6d0d"
+    },
+    "x64\\audio\\sfx\\RADIO_05_TALK_01.rpf": {
+      "size": 140869632,
+      "hash": "c4202b73632f91e63c7dcac63ba27818b8f1e1600e5a2e056aa3507bd00fa4d2"
+    },
+    "x64\\audio\\sfx\\RADIO_06_COUNTRY.rpf": {
+      "size": 174714880,
+      "hash": "4ec7c5b61e774cc6ced00338736e17ce10ba855584368c53b897cea44620f736"
+    },
+    "x64\\audio\\sfx\\RADIO_07_DANCE_01.rpf": {
+      "size": 124784640,
+      "hash": "158e40794441601bc040a9d310a82f7697fc7f32efc5680deb9a9b0b5174fc83"
+    },
+    "x64\\audio\\sfx\\RADIO_08_MEXICAN.rpf": {
+      "size": 119494656,
+      "hash": "32b6ec8c935582d13cef7729e8d0360202cd9d8b75c23bbd9013d02d9426f3ea"
+    },
+    "x64\\audio\\sfx\\RADIO_09_HIPHOP_OLD.rpf": {
+      "size": 367286272,
+      "hash": "770dc90b2551b970dc25e67b9d3e3e16c67a865e40065122c909726ece5c4e2a"
+    },
+    "x64\\audio\\sfx\\RADIO_11_TALK_02.rpf": {
+      "size": 126748672,
+      "hash": "b462879531ad9def4210e6f8efe87eb0914b35e1938c869463ed532150049670"
+    },
+    "x64\\audio\\sfx\\RADIO_12_REGGAE.rpf": {
+      "size": 246528000,
+      "hash": "480842c7b7ce5b7a6ad08d316dca79b5a653ae62ba3039e80c35c716e9c0a698"
+    },
+    "x64\\audio\\sfx\\RADIO_13_JAZZ.rpf": {
+      "size": 322127872,
+      "hash": "27e790da473181ce54f18d83e95c903bbd48d41ddc32e22caec10643abab5795"
+    },
+    "x64\\audio\\sfx\\RADIO_14_DANCE_02.rpf": {
+      "size": 208363520,
+      "hash": "53ad62e709b3753cf9ae2418cdde4c7a72a5c831b40eb1bb8221be351dd81d44"
+    },
+    "x64\\audio\\sfx\\RADIO_15_MOTOWN.rpf": {
+      "size": 227459072,
+      "hash": "4fef71f86e8cdc39c612f67bfab05e054e9d1a19979ef2e71a6bd370f524bcab"
+    },
+    "x64\\audio\\sfx\\RADIO_16_SILVERLAKE.rpf": {
+      "size": 464926720,
+      "hash": "54ba9b99031121410d106e710429c6c66f674fc638ce72d48a65fc43a6e55a6a"
+    },
+    "x64\\audio\\sfx\\RADIO_17_FUNK.rpf": {
+      "size": 289466368,
+      "hash": "e18fddbb7110679f337d880ade926dd354f09b75d87e1dd07a9cd8254c5e6755"
+    },
+    "x64\\audio\\sfx\\RADIO_18_90S_ROCK.rpf": {
+      "size": 209242112,
+      "hash": "8d35f62cdad9711826cb02e1fd3fe6f8943fbf588729b575003bffc315b4f6ab"
+    },
+    "x64\\audio\\sfx\\RADIO_ADVERTS.rpf": {
+      "size": 138137600,
+      "hash": "23bb57413e61e6a4586f594c4c058b7f6fa41dc2bc318db42d971beda10b31aa"
+    },
+    "x64\\audio\\sfx\\RADIO_NEWS.rpf": {
+      "size": 226027520,
+      "hash": "144b3f98d7547a6a5c4665c0f6551ff0c920be04bfb69a7ba162b35abc1e0be3"
+    },
+    "x64\\audio\\sfx\\RESIDENT.rpf": {
+      "size": 112785408,
+      "hash": "5b3313e01f71bca0d1f5258ab1a95899752e54a996e5d11676fc38f0159e785e"
+    },
+    "x64\\audio\\sfx\\SCRIPT.rpf": {
+      "size": 237871104,
+      "hash": "406124651269dca045577192e5072e0d06089d683f7236e235a8eafe7ebeb5f4"
+    },
+    "x64\\audio\\sfx\\SS_AC.rpf": {
+      "size": 443506688,
+      "hash": "dbbe37d153b98b83fd7f29f5148b0c6d31a4a99eb43696eb60ebdb64784fb897"
+    },
+    "x64\\audio\\sfx\\SS_DE.rpf": {
+      "size": 154318848,
+      "hash": "fb9c245b0a31bceea85432529f28b8a284fa1f99697b62a900e23113389fd7b4"
+    },
+    "x64\\audio\\sfx\\SS_FF.rpf": {
+      "size": 767225856,
+      "hash": "5f300ca914e03e5e964eebdf3c4ad8cb406a638ac66771b73ca20f8cc350b9cd"
+    },
+    "x64\\audio\\sfx\\SS_GM.rpf": {
+      "size": 396892160,
+      "hash": "714880ec39abbd7b791f3407b8d3b810c0ce15c540d6b5c2c2c9cac7fb3d7b8d"
+    },
+    "x64\\audio\\sfx\\SS_NP.rpf": {
+      "size": 219041792,
+      "hash": "36105990c33b5d7594c706274780dc0d1cbed48a5de5030b7dfdad7a3c28d25b"
+    },
+    "x64\\audio\\sfx\\SS_QR.rpf": {
+      "size": 190695424,
+      "hash": "573a8f0a7683a7d4f3875c8695ffdad197f96f19910f532c8882e39c73c9b2e0"
+    },
+    "x64\\audio\\sfx\\SS_ST.rpf": {
+      "size": 269207552,
+      "hash": "69935cdb5fc5d513752fa794749c2ba1d0459a57829ab9e7d8a668adc67b078d"
+    },
+    "x64\\audio\\sfx\\SS_UZ.rpf": {
+      "size": 8665088,
+      "hash": "c3150adaa56105836336cf1a9aacec3e379699be3564ca07810e634f09949d40"
+    },
+    "x64\\audio\\sfx\\STREAMED_AMBIENCE.rpf": {
+      "size": 29767680,
+      "hash": "a9434c8db31e1bc0784f568c466b48282ba564622d6c38034101ee8f97188363"
+    },
+    "x64\\audio\\sfx\\STREAMED_VEHICLES.rpf": {
+      "size": 43388928,
+      "hash": "2657636111f4cd7bba2a78b9cd2cfc6d27df033c2a8d463061a7538633cbf316"
+    },
+    "x64\\audio\\sfx\\STREAMED_VEHICLES_GRANULAR.rpf": {
+      "size": 207796224,
+      "hash": "f31cc031e06d1cfe5e863e8307857ab3c59b0736739e824277368ebee5df7eef"
+    },
+    "x64\\audio\\sfx\\STREAMED_VEHICLES_GRANULAR_NPC.rpf": {
+      "size": 42283008,
+      "hash": "9ee025daa5839720ab24914bcb79bbd2db17e6fd26df963b82fc90e43e7ef3e7"
+    },
+    "x64\\audio\\sfx\\STREAMED_VEHICLES_LOW_LATENCY.rpf": {
+      "size": 569344,
+      "hash": "caf9c9f9178c46e1bbec73809562be1e14eac0719da858158312b7e0c63b6952"
+    },
+    "x64\\audio\\sfx\\STREAMS.rpf": {
+      "size": 422133760,
+      "hash": "aea075c83aaccb6feb4c28db3358fde95b808e91951e257239ae33c9dc6ea3ae"
+    },
+    "x64\\audio\\sfx\\S_FULL_AMB_F.rpf": {
+      "size": 416227328,
+      "hash": "c67b9680ce264c866a974cfd09d016af46cffe8369d02f094985e3b38287c823"
+    },
+    "x64\\audio\\sfx\\S_FULL_AMB_M.rpf": {
+      "size": 640370688,
+      "hash": "03a7476bfc168831569a8d035178c63fd213e623c6f1b943ac1890a750808578"
+    },
+    "x64\\audio\\sfx\\S_FULL_GAN.rpf": {
+      "size": 269701120,
+      "hash": "133b13f355a4585903c48750cb0390c308a1d876002ee24cc42c1016140c7b7a"
+    },
+    "x64\\audio\\sfx\\S_FULL_SER.rpf": {
+      "size": 506068992,
+      "hash": "728e5c215624c92d6fbba3d84ca1fda64f8fd06501e204ec1c9fb7cea58902a6"
+    },
+    "x64\\audio\\sfx\\S_MINI_AMB.rpf": {
+      "size": 591904768,
+      "hash": "5fdb56a62cd8df4718158e2e7d6f0616f4911c966ec807aa3c2b57521be87fa1"
+    },
+    "x64\\audio\\sfx\\S_MINI_GAN.rpf": {
+      "size": 727840768,
+      "hash": "54bbb347c7f4a1b9444504a8e1d16635dd2d3d7a76f0ae1a2e5691ae647a5a33"
+    },
+    "x64\\audio\\sfx\\S_MINI_SER.rpf": {
+      "size": 447803392,
+      "hash": "759e6984323dfdb0165b4b5f81c28b6a5e0306f3c9f84a011024bbda1b6537ef"
+    },
+    "x64\\audio\\sfx\\S_MISC.rpf": {
+      "size": 697391104,
+      "hash": "546eaea811d9240e1c41d368b56bc149d76ed2679bd336f2d7576391bf9180aa"
+    },
+    "x64\\audio\\sfx\\WEAPONS_PLAYER.rpf": {
+      "size": 3883008,
+      "hash": "e1b45a90ca538e0dc540aedbc174fc8a9e9faafb24ed56e4d01eccefcfbd9916"
+    },
+    "x64\\data\\errorcodes\\american.txt": {
+      "size": 24639,
+      "hash": "da57f694151fe9aa646ab711aeae69b489a9426b595d4f0cc811bf18d512b545"
+    },
+    "x64\\data\\errorcodes\\chinese.txt": {
+      "size": 25427,
+      "hash": "185245eecbbc5ef8c6d222c308b1d86e7fc9c891010a874823f43e7320461e7e"
+    },
+    "x64\\data\\errorcodes\\chinesesimp.txt": {
+      "size": 24696,
+      "hash": "262422ff381c7cd4cac6b47cc0e563b0232ae150711b4ab71120ab5c21b4ea5e"
+    },
+    "x64\\data\\errorcodes\\french.txt": {
+      "size": 27649,
+      "hash": "6c220ba298c6f6978b80274eb8da1befa6aab65843ceb8581248f1f1ad65637d"
+    },
+    "x64\\data\\errorcodes\\german.txt": {
+      "size": 28247,
+      "hash": "42fa1a50c1c18926df34f26784058f18f0c3ebcb7d210348f8200aef921253fe"
+    },
+    "x64\\data\\errorcodes\\italian.txt": {
+      "size": 26740,
+      "hash": "8f18ae666ac1264e90e0a976d357507dc03d0703cb1a34c144314029ddb7578f"
+    },
+    "x64\\data\\errorcodes\\japanese.txt": {
+      "size": 38731,
+      "hash": "bd97de1473cac56072172d8ee76379a684bfa970b0f53baa816eb83814db87ae"
+    },
+    "x64\\data\\errorcodes\\korean.txt": {
+      "size": 34074,
+      "hash": "47bb0734bced2ab20a855b6b6d66609b8a788d14b822c1356016fe6160a40e3f"
+    },
+    "x64\\data\\errorcodes\\mexican.txt": {
+      "size": 26717,
+      "hash": "65d556e89d3a4f18327d4b89e39bf4ddc8a594121b12b5917b5c75ec40953ccb"
+    },
+    "x64\\data\\errorcodes\\polish.txt": {
+      "size": 26259,
+      "hash": "fcf714cefd15d8162128ea0c69112d4eb5afc506e3353d51b4fb74142dbbc1c6"
+    },
+    "x64\\data\\errorcodes\\portuguese.txt": {
+      "size": 28511,
+      "hash": "00758cdb2cb0b9ae380b8f546a533f3f057b3f848500a5fbd7c84d125b34caff"
+    },
+    "x64\\data\\errorcodes\\russian.txt": {
+      "size": 49102,
+      "hash": "5919c2cb0762875c03d7406f3c57a90b69312d985301404d2d5c4a1b1deb0f87"
+    },
+    "x64\\data\\errorcodes\\spanish.txt": {
+      "size": 29218,
+      "hash": "415794ce3561de69659cae3792374168be9ded43bbc39f76b54639fefd6c71b5"
+    }
+  }
+}

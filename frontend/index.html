@@ -28,7 +28,7 @@
     <img src="icon.png" class="titlebar-logo" alt="">
     <span class="titlebar-name">Graph Launcher</span>
     <div class="titlebar-sep"></div>
-    <span class="titlebar-version">v1.2.6</span>
+    <span class="titlebar-version">v1.2.7</span>
   </div>
   <div class="win-controls">
     <button class="win-btn" onclick="Api.minimize()" title="Réduire">
@@ -433,9 +433,10 @@
     <div class="video-embed-wrap">
       <div class="video-loading" id="video-loading">
         <div class="video-spinner"></div>
-        <span>Chargement…</span>
+        <span id="video-loading-msg">Chargement…</span>
       </div>
       <video id="video-player" controls style="display:none;position:absolute;inset:0;width:100%;height:100%;background:#000"></video>
+      <audio id="video-audio" style="display:none"></audio>
       <iframe id="video-iframe" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin" style="display:none;position:absolute;inset:0;width:100%;height:100%;border:none"></iframe>
     </div>
   </div>

@@ -405,29 +405,59 @@ class API:
             return {"success": False, "error": str(exc)}
 
     def get_video_stream_url(self, youtube_url: str) -> dict:
-        """Extract a direct playable stream URL from YouTube using yt-dlp."""
+        """Extract playable stream URLs via yt-dlp.
+
+        Preferred: separate H264 video + AAC audio URLs (up to 1080p+), played
+        synchronised in <video>+<audio> elements — no ffmpeg needed.
+        Fallback : best pre-muxed format (720p max without ffmpeg).
+        """
         try:
             import yt_dlp
-            ydl_opts = {
-                # Prefer pre-muxed 720p MP4 (format 22), then 360p (format 18),
-                # then any muxed format — avoids needing ffmpeg to merge streams.
-                "format": "22/18/best[acodec!=none][vcodec!=none]",
-                "quiet": True,
-                "no_warnings": True,
-                "socket_timeout": 15,
-            }
+            ydl_opts = {"quiet": True, "no_warnings": True, "socket_timeout": 15}
             with yt_dlp.YoutubeDL(ydl_opts) as ydl:
                 info = ydl.extract_info(youtube_url, download=False)
 
-            if "url" in info:
-                stream_url = info["url"]
-            else:
-                formats = [f for f in info.get("formats", []) if f.get("url") and f.get("acodec") != "none" and f.get("vcodec") != "none"]
-                if not formats:
-                    return {"success": False, "error": "Aucun format compatible trouvé"}
-                stream_url = formats[-1]["url"]
+            fmts = info.get("formats", [])
 
-            return {"success": True, "url": stream_url, "title": info.get("title", "")}
+            def has_v(f): return f.get("vcodec") not in (None, "none", "")
+            def has_a(f): return f.get("acodec") not in (None, "none", "")
+            def is_h264(f): return "avc1" in (f.get("vcodec") or "")
+
+            # Best H264 video-only stream
+            v_fmts = sorted(
+                [f for f in fmts if f.get("url") and has_v(f) and not has_a(f) and is_h264(f) and f.get("height", 0)],
+                key=lambda f: (f.get("height", 0), f.get("tbr", 0)),
+            )
+            # Best AAC/MP4 audio-only stream
+            a_fmts = sorted(
+                [f for f in fmts if f.get("url") and has_a(f) and not has_v(f) and f.get("ext") in ("m4a", "mp4")],
+                key=lambda f: f.get("abr", 0),
+            )
+
+            if v_fmts and a_fmts:
+                bv, ba = v_fmts[-1], a_fmts[-1]
+                return {
+                    "success": True, "separate": True,
+                    "video_url": bv["url"], "audio_url": ba["url"],
+                    "height": bv.get("height", 0),
+                    "title": info.get("title", ""),
+                }
+
+            # Fallback: best pre-muxed format
+            muxed = sorted(
+                [f for f in fmts if f.get("url") and has_v(f) and has_a(f)],
+                key=lambda f: (f.get("height", 0), f.get("tbr", 0)),
+            )
+            if muxed:
+                bm = muxed[-1]
+                return {
+                    "success": True, "separate": False,
+                    "video_url": bm["url"],
+                    "height": bm.get("height", 0),
+                    "title": info.get("title", ""),
+                }
+
+            return {"success": False, "error": "Aucun format compatible trouvé"}
         except ImportError:
             return {"success": False, "error": "yt-dlp non disponible"}
         except Exception as exc:

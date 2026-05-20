@@ -526,10 +526,9 @@ function openModal(id) {
 
 function closeModal() {
   $('modal-overlay').classList.remove('open');
-  const iframe = $('video-iframe');
-  if (iframe) iframe.src = '';
-  const video = $('video-player');
-  if (video) { video.pause(); video.src = ''; }
+  const iframe = $('video-iframe'); if (iframe) iframe.src = '';
+  const video = $('video-player'); if (video) { video.pause(); video.src = ''; }
+  const audio = $('video-audio');  if (audio) { audio.pause(); audio.src = ''; }
 }
 
 function onOverlayClick(e) {
@@ -588,23 +587,40 @@ function getYouTubeId(url) {
 
 async function showVideoPreview(youtubeUrl, title) {
   setText('video-title', title || '');
+  setText('video-loading-msg', 'Chargement…');
 
-  // Reset state — show spinner
-  $('video-loading').style.display = 'flex';
   const vp = $('video-player');
+  const va = $('video-audio');
   const vi = $('video-iframe');
-  vp.style.display = 'none';  vp.src = '';
+
+  // Reset
+  $('video-loading').style.display = 'flex';
+  vp.style.display = 'none';  vp.pause(); vp.src = '';
+  va.pause(); va.src = '';
   vi.style.display = 'none';  vi.src = '';
 
   openModal('modal-video');
 
-  // Ask Python to extract the direct stream via yt-dlp
   const r = await Api.getVideoStreamUrl(youtubeUrl);
   $('video-loading').style.display = 'none';
 
   if (r?.success) {
-    vp.src = r.url;
+    vp.src = r.video_url;
     vp.style.display = 'block';
+
+    if (r.separate) {
+      // Separate H264 video + AAC audio — sync them
+      va.src = r.audio_url;
+      va.volume = 1;
+
+      vp.addEventListener('play',   () => va.play().catch(() => {}), { once: false });
+      vp.addEventListener('pause',  () => va.pause(),                { once: false });
+      vp.addEventListener('seeked', () => { va.currentTime = vp.currentTime; }, { once: false });
+      vp.addEventListener('ratechange', () => { va.playbackRate = vp.playbackRate; }, { once: false });
+      vp.addEventListener('volumechange', () => { va.volume = vp.muted ? 0 : vp.volume; }, { once: false });
+      vp.muted = true; // video track has no audio; keep muted so native controls don't mislead
+    }
+
     vp.play().catch(() => {});
   } else {
     // Fallback: iframe embed

@@ -1,8 +1,10 @@
 """Workshop — fetches pack catalogue from GitHub and downloads packs."""
 
 import json
+import re
 import shutil
 import tempfile
+import time
 import urllib.request
 import zipfile
 from pathlib import Path
@@ -19,8 +21,15 @@ WORKSHOP_URL = (
 
 def fetch_workshop() -> dict:
     try:
+        # Append timestamp so GitHub raw CDN never serves a stale cached response
+        url = f"{WORKSHOP_URL}?_t={int(time.time())}"
         req = urllib.request.Request(
-            WORKSHOP_URL, headers={"User-Agent": "GraphLauncher"}
+            url,
+            headers={
+                "User-Agent": "GraphLauncher",
+                "Cache-Control": "no-cache, no-store",
+                "Pragma": "no-cache",
+            },
         )
         with urllib.request.urlopen(req, timeout=10) as resp:
             data = json.loads(resp.read().decode("utf-8"))
@@ -34,6 +43,20 @@ def fetch_workshop() -> dict:
         return {"success": False, "error": str(exc), "packs": []}
 
 
+def _detect_ext(resp, download_url: str) -> str:
+    """Return file extension from Content-Disposition, Content-Type, or URL."""
+    cd = resp.headers.get("Content-Disposition", "")
+    m = re.search(r'filename=["\']?([^"\';\s]+)', cd, re.IGNORECASE)
+    if m:
+        ext = Path(m.group(1)).suffix.lower()
+        if ext:
+            return ext
+    ct = resp.headers.get("Content-Type", "").lower()
+    if "zip" in ct:
+        return ".zip"
+    return Path(download_url.split("?")[0]).suffix.lower()
+
+
 def download_and_extract(
     download_url: str,
     pack_name: str,
@@ -44,15 +67,8 @@ def download_and_extract(
     if not dest.is_dir():
         return {"success": False, "error": "Dossier de packs introuvable."}
 
-    ext = Path(download_url.split("?")[0]).suffix.lower()
-    if ext != ".zip":
-        return {
-            "success": False,
-            "error": f"Format '{ext}' non supporté — utilisez .zip.",
-        }
-
     tmp_dir = tempfile.mkdtemp(prefix="graphlauncher_ws_")
-    tmp_file = Path(tmp_dir) / f"pack{ext}"
+    tmp_file = Path(tmp_dir) / "pack_download"
 
     try:
         if progress_cb:
@@ -62,6 +78,13 @@ def download_and_extract(
             download_url, headers={"User-Agent": "GraphLauncher"}
         )
         with urllib.request.urlopen(req, timeout=120) as resp:
+            ext = _detect_ext(resp, download_url)
+            if ext != ".zip":
+                return {
+                    "success": False,
+                    "error": f"Format '{ext or '?'}' non supporté — utilisez .zip.",
+                }
+
             total = int(resp.headers.get("Content-Length") or 0)
             downloaded = 0
             with open(tmp_file, "wb") as f:

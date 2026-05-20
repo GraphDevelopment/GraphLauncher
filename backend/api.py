@@ -381,3 +381,46 @@ class API:
             "python": sys.version,
             "baseline_exists": self._baseline_manager.exists(),
         }
+
+    # ------------------------------------------------------------------ #
+    #  Media helpers                                                       #
+    # ------------------------------------------------------------------ #
+
+    def fetch_image_b64(self, url: str) -> dict:
+        """Fetch an external image server-side, return as base64 data URI."""
+        import base64
+        import urllib.request
+        try:
+            req = urllib.request.Request(
+                url,
+                headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"},
+            )
+            with urllib.request.urlopen(req, timeout=10) as resp:
+                data = resp.read()
+                ct = resp.headers.get("Content-Type", "image/jpeg").split(";")[0].strip()
+            b64 = base64.b64encode(data).decode("ascii")
+            return {"success": True, "src": f"data:{ct};base64,{b64}"}
+        except Exception as exc:
+            logger.warning("fetch_image_b64 %s: %s", url, exc)
+            return {"success": False, "error": str(exc)}
+
+    def open_video_window(self, youtube_url: str, title: str = "") -> dict:
+        """Open a YouTube video in a new pywebview window (bypasses iframe embed restrictions)."""
+        import re
+        m = re.search(r"(?:v=|youtu\.be/)([A-Za-z0-9_-]{11})", youtube_url)
+        if not m:
+            return {"success": False, "error": "URL YouTube invalide"}
+        vid_id = m.group(1)
+        embed_url = f"https://www.youtube.com/embed/{vid_id}?autoplay=1&rel=0"
+        try:
+            webview.create_window(
+                title=title or "Aperçu",
+                url=embed_url,
+                width=1280,
+                height=720,
+                resizable=True,
+            )
+            return {"success": True}
+        except Exception as exc:
+            logger.error("open_video_window: %s", exc)
+            return {"success": False, "error": str(exc)}

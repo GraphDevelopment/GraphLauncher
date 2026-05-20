@@ -64,6 +64,8 @@ const Api = (() => {
     // Workshop
     getWorkshopPacks:     ()           => call('get_workshop_packs'),
     downloadWorkshopPack: (url, name)  => call('download_workshop_pack', url, name),
+    fetchImageB64:        (url)        => call('fetch_image_b64', url),
+    openVideoWindow:      (url, title) => call('open_video_window', url, title),
 
     // Updates
     checkForUpdate:       ()           => call('check_for_update'),

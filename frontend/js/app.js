@@ -585,11 +585,7 @@ function getYouTubeId(url) {
 }
 
 function showVideoPreview(youtubeUrl, title) {
-  const id = getYouTubeId(youtubeUrl);
-  if (!id) return;
-  setText('video-title', title || '');
-  $('video-iframe').src = `https://www.youtube.com/embed/${id}?autoplay=1&rel=0`;
-  openModal('modal-video');
+  Api.openVideoWindow(youtubeUrl, title);
 }
 
 /* ══════════════════════════════════════════════════════════
@@ -622,10 +618,7 @@ async function refreshWorkshop() {
 function buildWsCard(pack) {
   const el = document.createElement('div');
   el.className = 'ws-card';
-
-  const img = pack.preview_url
-    ? `<img class="ws-card-img" src="${esc(pack.preview_url)}" alt="" onerror="wsImgError(this)">`
-    : `<div class="ws-card-img-ph">${wsImgPh()}</div>`;
+  const imgId = 'ws-img-' + pack.id.replace(/[^a-z0-9]/gi, '-');
 
   const tags = (pack.tags || []).map(tg => {
     const cls = tg.replace(/\s+/g, '-');
@@ -633,7 +626,7 @@ function buildWsCard(pack) {
   }).join('');
 
   el.innerHTML = `
-    ${img}
+    <div class="ws-card-img-ph" id="${imgId}">${wsImgPh()}</div>
     <div class="ws-card-body">
       <div class="ws-card-name">${esc(pack.name)}</div>
       <div class="ws-card-author">${esc(pack.author || '')}${pack.version ? ' · v' + esc(pack.version) : ''}</div>
@@ -655,6 +648,22 @@ function buildWsCard(pack) {
         </button>
       </div>
     </div>`;
+
+  // Load image via Python proxy so WebView2 restrictions don't apply
+  if (pack.preview_url) {
+    Api.fetchImageB64(pack.preview_url).then(r => {
+      if (r?.success) {
+        const ph = document.getElementById(imgId);
+        if (ph) {
+          const img = document.createElement('img');
+          img.className = 'ws-card-img';
+          img.src = r.src;
+          ph.replaceWith(img);
+        }
+      }
+    });
+  }
+
   return el;
 }
 

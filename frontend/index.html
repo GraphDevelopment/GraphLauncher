@@ -422,7 +422,7 @@
       </div>
       <div>
         <div class="modal-title" id="prog-title">Opération en cours</div>
-        <div class="modal-desc">Veuillez patienter</div>
+        <div class="modal-desc" data-i18n="modal_wait">Please wait</div>
       </div>
     </div>
     <div class="prog-info" id="prog-message">Initialisation…</div>
@@ -462,8 +462,8 @@
       </div>
     </div>
     <div class="modal-footer">
-      <button class="btn btn-ghost" onclick="closeModal()">Annuler</button>
-      <button class="btn btn-primary" id="confirm-ok">Confirmer</button>
+      <button class="btn btn-ghost" onclick="closeModal()" data-i18n="confirm_cancel">Cancel</button>
+      <button class="btn btn-primary" id="confirm-ok" data-i18n="confirm_ok">Confirm</button>
     </div>
   </div>
 

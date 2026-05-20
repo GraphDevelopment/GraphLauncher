@@ -14,6 +14,30 @@
       "download_url": "https://pixeldrain.com/api/file/CXWBmZhP?download",
       "size_mb": 4900,
       "downloads": 0
+    },
+    {
+      "id": "spongebob",
+      "name": "Sponge Bob",
+      "author": "GraphDevelopment",
+      "version": "1",
+      "description": "Custom Sky - Sponge Bob",
+      "tags": ["CITIZEN", "MODS"],
+      "preview_url": "https://i.imgur.com/KJVz6gA.jpeg",
+      "download_url": "https://archive.org/download/sponge-bob_202605/SpongeBOB.rar",
+      "size_mb": 85,
+      "downloads": 0
+    },
+    {
+      "id": "epstein",
+      "name": "Epstein",
+      "author": "GraphDevelopment",
+      "version": "1",
+      "description": "Custom Sky - Epstein",
+      "tags": ["CITIZEN", "MODS"],
+      "preview_url": "https://i.imgur.com/alKKFSL.jpeg",
+      "download_url": "https://archive.org/download/epstein_202605/Epstein.rar",
+      "size_mb": 85,
+      "downloads": 0
     }
   ]
 }

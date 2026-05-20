@@ -2,7 +2,7 @@
 ; Compiler : Inno Setup 6.x  https://jrsoftware.org/isinfo.php
 
 #define AppName      "Graph Launcher"
-#define AppVersion   "1.2.6"
+#define AppVersion   "1.2.8"
 #define AppPublisher "Ayka"
 #define AppURL       "https://www.ayka.dev"
 #define AppExe       "Graph Launcher.exe"

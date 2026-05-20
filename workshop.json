@@ -1,18 +1,18 @@
 {
   "version": 1,
-  "updated": "2025-01-01",
+  "updated": "2026-20-05",
   "packs": [
     {
-      "id": "example-naturalvision",
-      "name": "NaturalVision Evolved",
-      "author": "Razed",
-      "version": "2.1",
-      "description": "Pack graphique ultra-réaliste pour FiveM avec textures HD, ENB et ReShade.",
-      "tags": ["RESHADE", "ENB"],
+      "id": "hiro-v5",
+      "name": "HIRO V5",
+      "author": "Hiromasa",
+      "version": "v5",
+      "description": "Explore landscapes, stunningly realistic textures, and breathtaking visual effects that will bring your game to life like never before",
+      "tags": ["GTA", "MODS", "PLUGIN"],
       "preview_url": "",
-      "download_url": "https://example.com/naturalvision.zip",
+      "download_url": "https://pixeldrain.com/api/file/CXWBmZhP?download",
       "size_mb": 450,
-      "downloads": 12500
+      "downloads": 0
     }
   ]
 }

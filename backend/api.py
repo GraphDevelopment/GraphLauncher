@@ -404,6 +404,36 @@ class API:
             logger.warning("fetch_image_b64 %s: %s", url, exc)
             return {"success": False, "error": str(exc)}
 
+    def get_video_stream_url(self, youtube_url: str) -> dict:
+        """Extract a direct playable stream URL from YouTube using yt-dlp."""
+        try:
+            import yt_dlp
+            ydl_opts = {
+                # Prefer pre-muxed 720p MP4 (format 22), then 360p (format 18),
+                # then any muxed format — avoids needing ffmpeg to merge streams.
+                "format": "22/18/best[acodec!=none][vcodec!=none]",
+                "quiet": True,
+                "no_warnings": True,
+                "socket_timeout": 15,
+            }
+            with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+                info = ydl.extract_info(youtube_url, download=False)
+
+            if "url" in info:
+                stream_url = info["url"]
+            else:
+                formats = [f for f in info.get("formats", []) if f.get("url") and f.get("acodec") != "none" and f.get("vcodec") != "none"]
+                if not formats:
+                    return {"success": False, "error": "Aucun format compatible trouvé"}
+                stream_url = formats[-1]["url"]
+
+            return {"success": True, "url": stream_url, "title": info.get("title", "")}
+        except ImportError:
+            return {"success": False, "error": "yt-dlp non disponible"}
+        except Exception as exc:
+            logger.error("get_video_stream_url: %s", exc)
+            return {"success": False, "error": str(exc)}
+
     def open_video_window(self, youtube_url: str, title: str = "") -> dict:
         """Open a YouTube video in a new pywebview window (bypasses iframe embed restrictions)."""
         import re

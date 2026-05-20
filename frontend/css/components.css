@@ -606,6 +606,26 @@
   height: 100%;
   border: none;
 }
+.video-loading {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  background: #000;
+  color: var(--text3);
+  font-size: 13px;
+}
+.video-spinner {
+  width: 38px;
+  height: 38px;
+  border: 3px solid rgba(255,255,255,.15);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin .75s linear infinite;
+}
 
 /* ── Info cards ──────────────────────────────────── */
 .info-grid {

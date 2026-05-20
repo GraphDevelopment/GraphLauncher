@@ -528,6 +528,8 @@ function closeModal() {
   $('modal-overlay').classList.remove('open');
   const iframe = $('video-iframe');
   if (iframe) iframe.src = '';
+  const video = $('video-player');
+  if (video) { video.pause(); video.src = ''; }
 }
 
 function onOverlayClick(e) {
@@ -584,12 +586,34 @@ function getYouTubeId(url) {
   } catch { return ''; }
 }
 
-function showVideoPreview(youtubeUrl, title) {
-  const id = getYouTubeId(youtubeUrl);
-  if (!id) return;
+async function showVideoPreview(youtubeUrl, title) {
   setText('video-title', title || '');
-  $('video-iframe').src = `https://www.youtube.com/embed/${id}?autoplay=1&rel=0`;
+
+  // Reset state — show spinner
+  $('video-loading').style.display = 'flex';
+  const vp = $('video-player');
+  const vi = $('video-iframe');
+  vp.style.display = 'none';  vp.src = '';
+  vi.style.display = 'none';  vi.src = '';
+
   openModal('modal-video');
+
+  // Ask Python to extract the direct stream via yt-dlp
+  const r = await Api.getVideoStreamUrl(youtubeUrl);
+  $('video-loading').style.display = 'none';
+
+  if (r?.success) {
+    vp.src = r.url;
+    vp.style.display = 'block';
+    vp.play().catch(() => {});
+  } else {
+    // Fallback: iframe embed
+    const id = getYouTubeId(youtubeUrl);
+    if (id) {
+      vi.src = `https://www.youtube.com/embed/${id}?autoplay=1&rel=0&origin=${encodeURIComponent(location.origin)}`;
+      vi.style.display = 'block';
+    }
+  }
 }
 
 /* ══════════════════════════════════════════════════════════

@@ -424,6 +424,17 @@
     <div class="prog-pct" id="prog-pct">0%</div>
   </div>
 
+  <!-- Video preview -->
+  <div class="modal modal-video" id="modal-video" style="display:none">
+    <div class="modal-head">
+      <div class="modal-title" id="video-title"></div>
+      <button class="btn btn-ghost btn-sm" onclick="closeModal()">✕</button>
+    </div>
+    <div class="video-embed-wrap">
+      <iframe id="video-iframe" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+  </div>
+
   <!-- Confirm -->
   <div class="modal" id="modal-confirm" style="display:none">
     <div class="modal-head">

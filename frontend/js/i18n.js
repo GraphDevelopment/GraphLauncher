@@ -27,7 +27,7 @@ const I18n = (() => {
 
       workshop_title: 'Workshop',
       workshop_subtitle: 'Téléchargez des packs depuis la communauté',
-      btn_refresh: 'Actualiser', btn_download: 'Télécharger',
+      btn_refresh: 'Actualiser', btn_download: 'Télécharger', btn_preview: 'Aperçu',
       ws_empty_title: 'Aucun pack disponible',
       ws_empty_desc: 'Le workshop est vide ou inaccessible pour le moment.',
       ws_size: '{n} Mo', ws_downloads: '{n} téléchargements',
@@ -122,7 +122,7 @@ const I18n = (() => {
 
       workshop_title: 'Workshop',
       workshop_subtitle: 'Download packs from the community',
-      btn_refresh: 'Refresh', btn_download: 'Download',
+      btn_refresh: 'Refresh', btn_download: 'Download', btn_preview: 'Preview',
       ws_empty_title: 'No packs available',
       ws_empty_desc: 'The workshop is empty or unreachable.',
       ws_size: '{n} MB', ws_downloads: '{n} downloads',

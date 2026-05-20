@@ -526,6 +526,8 @@ function openModal(id) {
 
 function closeModal() {
   $('modal-overlay').classList.remove('open');
+  const iframe = $('video-iframe');
+  if (iframe) iframe.src = '';
 }
 
 function onOverlayClick(e) {
@@ -569,6 +571,26 @@ function jsStr(s)  { return "'" + String(s).replace(/\\/g,'\\\\').replace(/'/g,"
 function setText(id, v) { const e = $(id); if (e) e.textContent = v; }
 function setVal (id, v) { const e = $(id); if (e) e.value = v; }
 function getVal (id)    { const e = $(id); return e ? e.value.trim() : ''; }
+
+/* ══════════════════════════════════════════════════════════
+   VIDEO PREVIEW
+══════════════════════════════════════════════════════════ */
+
+function getYouTubeId(url) {
+  try {
+    const u = new URL(url);
+    if (u.hostname === 'youtu.be') return u.pathname.slice(1);
+    return u.searchParams.get('v') || '';
+  } catch { return ''; }
+}
+
+function showVideoPreview(youtubeUrl, title) {
+  const id = getYouTubeId(youtubeUrl);
+  if (!id) return;
+  setText('video-title', title || '');
+  $('video-iframe').src = `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0`;
+  openModal('modal-video');
+}
 
 /* ══════════════════════════════════════════════════════════
    WORKSHOP
@@ -622,6 +644,11 @@ function buildWsCard(pack) {
         ${pack.downloads ? `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg><span>${pack.downloads.toLocaleString()}</span>` : ''}
       </div>
       <div class="ws-card-actions">
+        ${pack.youtube_url ? `
+        <button class="btn btn-ghost btn-sm" onclick="showVideoPreview(${jsStr(pack.youtube_url)},${jsStr(pack.name)})">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+          <span data-i18n="btn_preview">${t('btn_preview')}</span>
+        </button>` : ''}
         <button class="btn btn-primary btn-sm" onclick="doDownloadWsPack(${jsStr(pack.download_url)},${jsStr(pack.name)},this)">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
           <span data-i18n="btn_download">${t('btn_download')}</span>

@@ -580,6 +580,33 @@
 .ws-card-meta svg { width: 12px; height: 12px; flex-shrink: 0; }
 .ws-card-actions { display: flex; gap: 8px; margin-top: 2px; }
 
+/* ── Video modal ─────────────────────────────────── */
+.modal-video {
+  width: min(820px, 92vw);
+  padding: 16px;
+}
+.modal-video .modal-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+.video-embed-wrap {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  background: #000;
+  border-radius: var(--r-sm);
+  overflow: hidden;
+}
+.video-embed-wrap iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
 /* ── Info cards ──────────────────────────────────── */
 .info-grid {
   display: grid;

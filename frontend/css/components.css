@@ -513,6 +513,34 @@
 .update-banner svg { color: var(--accent); flex-shrink: 0; }
 .update-banner-msg { flex: 1; }
 
+/* ── Workshop search ─────────────────────────────── */
+.search-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.search-wrap svg {
+  position: absolute;
+  left: 9px;
+  width: 14px;
+  height: 14px;
+  color: var(--text3);
+  pointer-events: none;
+}
+.search-wrap input {
+  padding: 7px 12px 7px 30px;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: var(--r-sm);
+  color: var(--text1);
+  font-size: 13px;
+  font-family: var(--font);
+  width: 220px;
+  outline: none;
+  transition: border-color var(--t-sm);
+}
+.search-wrap input:focus { border-color: var(--accent); }
+
 /* ── Workshop grid ───────────────────────────────── */
 .ws-grid {
   display: grid;

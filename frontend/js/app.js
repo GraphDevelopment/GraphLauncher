@@ -636,7 +636,13 @@ async function showVideoPreview(youtubeUrl, title) {
    WORKSHOP
 ══════════════════════════════════════════════════════════ */
 
+const WS_IMG_CACHE = new Map(); // url → base64 data URI
+
 async function refreshWorkshop() {
+  WS_IMG_CACHE.clear();
+  const search = $('ws-search');
+  if (search) search.value = '';
+
   const btn = document.querySelector('[onclick="refreshWorkshop()"]');
   btnLoad(btn, '');
   $('ws-grid').innerHTML = '';
@@ -659,9 +665,19 @@ async function refreshWorkshop() {
   r.packs.forEach(p => grid.appendChild(buildWsCard(p)));
 }
 
+function filterWorkshop(query) {
+  const q = query.trim().toLowerCase();
+  document.querySelectorAll('#ws-grid .ws-card').forEach(card => {
+    const text = card.dataset.search || '';
+    card.style.display = (!q || text.includes(q)) ? '' : 'none';
+  });
+}
+
 function buildWsCard(pack) {
   const el = document.createElement('div');
   el.className = 'ws-card';
+  // data-search lets filterWorkshop() do fast substring matching
+  el.dataset.search = [pack.name, pack.author, pack.description, ...(pack.tags || [])].join(' ').toLowerCase();
   const imgId = 'ws-img-' + pack.id.replace(/[^a-z0-9]/gi, '-');
 
   const tags = (pack.tags || []).map(tg => {
@@ -693,19 +709,27 @@ function buildWsCard(pack) {
       </div>
     </div>`;
 
-  // Load image via Python proxy so WebView2 restrictions don't apply
+  // Load image via Python proxy (cached in WS_IMG_CACHE to avoid re-fetching)
   if (pack.preview_url) {
-    Api.fetchImageB64(pack.preview_url).then(r => {
-      if (r?.success) {
-        const ph = document.getElementById(imgId);
-        if (ph) {
-          const img = document.createElement('img');
-          img.className = 'ws-card-img';
-          img.src = r.src;
-          ph.replaceWith(img);
-        }
+    const applyImg = (src) => {
+      const ph = document.getElementById(imgId);
+      if (ph) {
+        const img = document.createElement('img');
+        img.className = 'ws-card-img';
+        img.src = src;
+        ph.replaceWith(img);
       }
-    });
+    };
+    if (WS_IMG_CACHE.has(pack.preview_url)) {
+      applyImg(WS_IMG_CACHE.get(pack.preview_url));
+    } else {
+      Api.fetchImageB64(pack.preview_url).then(r => {
+        if (r?.success) {
+          WS_IMG_CACHE.set(pack.preview_url, r.src);
+          applyImg(r.src);
+        }
+      });
+    }
   }
 
   return el;

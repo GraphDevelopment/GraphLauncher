@@ -3,6 +3,7 @@
 import json
 import re
 import shutil
+import subprocess
 import tempfile
 import time
 import urllib.request
@@ -18,10 +19,28 @@ WORKSHOP_URL = (
     "https://raw.githubusercontent.com/GraphDevelopment/GraphLauncher/main/workshop.json"
 )
 
+_WINRAR_PATHS = [
+    r"C:\Program Files\WinRAR\WinRAR.exe",
+    r"C:\Program Files (x86)\WinRAR\WinRAR.exe",
+]
+_SEVENZ_PATHS = [
+    r"C:\Program Files\7-Zip\7z.exe",
+    r"C:\Program Files (x86)\7-Zip\7z.exe",
+]
+
+
+def _find_extractor() -> tuple[str, str] | tuple[None, None]:
+    for p in _SEVENZ_PATHS:
+        if Path(p).exists():
+            return ("7z", p)
+    for p in _WINRAR_PATHS:
+        if Path(p).exists():
+            return ("winrar", p)
+    return (None, None)
+
 
 def fetch_workshop() -> dict:
     try:
-        # Append timestamp so GitHub raw CDN never serves a stale cached response
         url = f"{WORKSHOP_URL}?_t={int(time.time())}"
         req = urllib.request.Request(
             url,
@@ -54,7 +73,44 @@ def _detect_ext(resp, download_url: str) -> str:
     ct = resp.headers.get("Content-Type", "").lower()
     if "zip" in ct:
         return ".zip"
+    if "rar" in ct:
+        return ".rar"
     return Path(download_url.split("?")[0]).suffix.lower()
+
+
+def _extract_zip(tmp_file: Path, pack_dest: Path, progress_cb: Callable | None) -> None:
+    with zipfile.ZipFile(tmp_file) as zf:
+        names = zf.namelist()
+        for i, name in enumerate(names):
+            zf.extract(name, pack_dest)
+            if progress_cb and names:
+                progress_cb(76 + int((i + 1) / len(names) * 22), f"Extraction… {i + 1}/{len(names)}")
+
+
+def _extract_rar(tmp_file: Path, pack_dest: Path, progress_cb: Callable | None) -> None:
+    kind, exe = _find_extractor()
+    if kind is None:
+        raise RuntimeError(
+            "Aucun extracteur .rar trouvé. Installez 7-Zip ou WinRAR."
+        )
+
+    pack_dest.mkdir(parents=True, exist_ok=True)
+    dest_str = str(pack_dest)
+
+    if kind == "7z":
+        cmd = [exe, "x", str(tmp_file), f"-o{dest_str}", "-y"]
+    else:  # winrar
+        cmd = [exe, "x", "-y", "-inul", str(tmp_file), dest_str + "\\"]
+
+    if progress_cb:
+        progress_cb(78, "Extraction .rar…")
+
+    result = subprocess.run(cmd, capture_output=True)
+    if result.returncode not in (0, 1):  # WinRAR returns 1 for warnings
+        raise RuntimeError(result.stderr.decode(errors="replace").strip() or "Erreur d'extraction")
+
+    if progress_cb:
+        progress_cb(100, "Terminé")
 
 
 def download_and_extract(
@@ -79,10 +135,10 @@ def download_and_extract(
         )
         with urllib.request.urlopen(req, timeout=120) as resp:
             ext = _detect_ext(resp, download_url)
-            if ext != ".zip":
+            if ext not in (".zip", ".rar"):
                 return {
                     "success": False,
-                    "error": f"Format '{ext or '?'}' non supporté — utilisez .zip.",
+                    "error": f"Format '{ext or '?'}' non supporté — utilisez .zip ou .rar.",
                 }
 
             total = int(resp.headers.get("Content-Length") or 0)
@@ -101,12 +157,10 @@ def download_and_extract(
         pack_dest = dest / pack_name
         pack_dest.mkdir(parents=True, exist_ok=True)
 
-        with zipfile.ZipFile(tmp_file) as zf:
-            names = zf.namelist()
-            for i, name in enumerate(names):
-                zf.extract(name, pack_dest)
-                if progress_cb and names:
-                    progress_cb(76 + int((i + 1) / len(names) * 22), f"Extraction… {i + 1}/{len(names)}")
+        if ext == ".zip":
+            _extract_zip(tmp_file, pack_dest, progress_cb)
+        else:
+            _extract_rar(tmp_file, pack_dest, progress_cb)
 
         if progress_cb:
             progress_cb(100, "Terminé")

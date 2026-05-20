@@ -585,7 +585,11 @@ function getYouTubeId(url) {
 }
 
 function showVideoPreview(youtubeUrl, title) {
-  Api.openVideoWindow(youtubeUrl, title);
+  const id = getYouTubeId(youtubeUrl);
+  if (!id) return;
+  setText('video-title', title || '');
+  $('video-iframe').src = `https://www.youtube.com/embed/${id}?autoplay=1&rel=0`;
+  openModal('modal-video');
 }
 
 /* ══════════════════════════════════════════════════════════

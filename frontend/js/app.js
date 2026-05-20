@@ -624,7 +624,7 @@ function buildWsCard(pack) {
   el.className = 'ws-card';
 
   const img = pack.preview_url
-    ? `<img class="ws-card-img" src="${esc(pack.preview_url)}" alt="" onerror="this.parentNode.innerHTML=wsImgPh()">`
+    ? `<img class="ws-card-img" src="${esc(pack.preview_url)}" alt="" onerror="wsImgError(this)">`
     : `<div class="ws-card-img-ph">${wsImgPh()}</div>`;
 
   const tags = (pack.tags || []).map(tg => {
@@ -660,6 +660,13 @@ function buildWsCard(pack) {
 
 function wsImgPh() {
   return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>`;
+}
+
+function wsImgError(img) {
+  const ph = document.createElement('div');
+  ph.className = 'ws-card-img-ph';
+  ph.innerHTML = wsImgPh();
+  img.replaceWith(ph);
 }
 
 async function doDownloadWsPack(url, name, btn) {

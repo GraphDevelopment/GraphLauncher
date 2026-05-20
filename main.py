@@ -41,7 +41,7 @@ def main() -> None:
 
     api.set_window(window)
 
-    webview.start(debug="--debug" in sys.argv)
+    webview.start(debug="--debug" in sys.argv, http_server=True)
 
 
 if __name__ == "__main__":

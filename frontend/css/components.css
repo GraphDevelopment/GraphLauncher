@@ -582,7 +582,7 @@
 
 /* ── Video modal ─────────────────────────────────── */
 .modal-video {
-  width: min(820px, 92vw);
+  width: min(1100px, 94vw);
   padding: 16px;
 }
 .modal-video .modal-head {

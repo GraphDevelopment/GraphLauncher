@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Graph Launcher</title>
+  <link rel="icon" href="icon.png">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <script src="js/i18n.js"></script>
+</head>
+<body>
+
+<!-- ══ BOOT SCREEN ═══════════════════════════════════════ -->
+<div id="app-loading">
+  <div class="boot-icon">
+    <img src="icon.png" alt="logo" width="32" height="32">
+  </div>
+  <div class="boot-label">Graph Launcher</div>
+  <div class="boot-sub">Initialisation…</div>
+  <div class="spinner"></div>
+</div>
+
+<!-- ══ TITLEBAR ══════════════════════════════════════════ -->
+<div class="titlebar">
+  <!-- .pywebview-drag-region enables window drag in pywebview frameless mode -->
+  <div class="titlebar-drag pywebview-drag-region">
+    <img src="icon.png" class="titlebar-logo" alt="">
+    <span class="titlebar-name">Graph Launcher</span>
+    <div class="titlebar-sep"></div>
+    <span class="titlebar-version">v1.2.6</span>
+  </div>
+  <div class="win-controls">
+    <button class="win-btn" onclick="Api.minimize()" title="Réduire">
+      <svg width="10" height="1" viewBox="0 0 10 1">
+        <rect width="10" height="1" fill="currentColor"/>
+      </svg>
+    </button>
+    <button class="win-btn" onclick="Api.toggleMaximize()" title="Agrandir">
+      <svg width="10" height="10" viewBox="0 0 10 10">
+        <rect x="1" y="1" width="8" height="8" rx="1" fill="none" stroke="currentColor" stroke-width="1.2"/>
+      </svg>
+    </button>
+    <button class="win-btn close" onclick="Api.close()" title="Fermer">
+      <svg width="10" height="10" viewBox="0 0 10 10">
+        <line x1="1" y1="1" x2="9" y2="9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+        <line x1="9" y1="1" x2="1" y2="9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+      </svg>
+    </button>
+  </div>
+</div>
+
+<!-- ══ APP ═══════════════════════════════════════════════ -->
+<div class="app">
+
+  <!-- ── SIDEBAR ──────────────────────────────────────── -->
+  <aside class="sidebar">
+    <nav class="sidebar-nav">
+      <div class="nav-section-label">Navigation</div>
+
+      <a class="nav-item" data-page="packs" onclick="navigate('packs')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+          <polyline points="3.29 7 12 12 20.71 7"/>
+          <line x1="12" y1="22" x2="12" y2="12"/>
+        </svg>
+        <span data-i18n="nav_packs">Packs graphiques</span>
+      </a>
+
+      <a class="nav-item" data-page="workshop" onclick="navigate('workshop')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"/>
+          <line x1="2" y1="12" x2="22" y2="12"/>
+          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+        </svg>
+        <span data-i18n="nav_workshop">Workshop</span>
+      </a>
+
+      <a class="nav-item" data-page="tutorial" onclick="navigate('tutorial')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+          <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+        </svg>
+        <span data-i18n="nav_tutorial">Guide d'utilisation</span>
+      </a>
+
+      <a class="nav-item" data-page="settings" onclick="navigate('settings')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="3"/>
+          <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+        </svg>
+        <span data-i18n="nav_settings">Paramètres</span>
+      </a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <div class="status-line">
+        <div class="status-dot"></div>
+        <span data-i18n="status_active">Launcher actif</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ── MAIN ─────────────────────────────────────────── -->
+  <main class="main">
+
+    <!-- Update banner (hidden until update found) -->
+    <div id="update-banner" class="update-banner" style="display:none">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+      </svg>
+      <span class="update-banner-msg" id="update-msg"></span>
+      <button class="btn btn-primary btn-sm" id="update-dl-btn" onclick="openUpdateUrl()">
+        <span data-i18n="btn_update_dl">Télécharger</span>
+      </button>
+      <button class="btn btn-ghost btn-sm" onclick="dismissUpdateBanner()" style="padding:4px 8px; line-height:1">✕</button>
+    </div>
+
+    <!-- ════ PAGE PACKS ════════════════════════════════ -->
+    <div class="page" id="page-packs">
+      <div class="page-header">
+        <div>
+          <div class="page-title">Gestionnaire de packs</div>
+          <div class="page-subtitle">Installez et gérez vos packs graphiques FiveM</div>
+        </div>
+        <div style="display:flex;gap:8px;align-items:center">
+          <button class="btn btn-warn" onclick="confirmClean('fivem',this)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 21l9-9"/><path d="M12.22 6.22A6 6 0 0 1 19.78 13.78L12 21H3l.51-.51 6.18-6.18A5 5 0 0 1 12.22 6.22z"/>
+            </svg>
+            Clean FiveM
+          </button>
+          <button class="btn btn-ghost" onclick="confirmClean('gtav',this)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 21l9-9"/><path d="M12.22 6.22A6 6 0 0 1 19.78 13.78L12 21H3l.51-.51 6.18-6.18A5 5 0 0 1 12.22 6.22z"/>
+            </svg>
+            Clean GTA V
+          </button>
+          <button class="btn btn-primary" onclick="refreshPacks()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="23 4 23 10 17 10"/>
+              <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/>
+            </svg>
+            Scanner
+          </button>
+        </div>
+      </div>
+
+      <div class="stats-row">
+        <div class="stat-card">
+          <div class="stat-label">Packs détectés</div>
+          <div class="stat-val" id="stat-total">—</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Installés</div>
+          <div class="stat-val" style="color:var(--green)" id="stat-installed">—</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Disponibles</div>
+          <div class="stat-val" style="color:var(--text3)" id="stat-pending">—</div>
+        </div>
+      </div>
+
+      <div class="toolbar">
+        <div class="search-wrap">
+          <svg class="ico-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+          <input class="search-input" id="search-input" type="text" placeholder="Rechercher un pack…" oninput="onSearch(this.value)">
+        </div>
+        <div class="filter-row" id="status-filters">
+          <span class="chip active" data-status="all"           onclick="setStatusFilter('all')">Tous</span>
+          <span class="chip"       data-status="installed"      onclick="setStatusFilter('installed')">Installés</span>
+          <span class="chip"       data-status="not-installed"  onclick="setStatusFilter('not-installed')">Non installés</span>
+        </div>
+        <div class="filter-row" id="tag-filters">
+          <span class="chip" data-tag="MODS"       onclick="toggleTag('MODS')">MODS</span>
+          <span class="chip" data-tag="CITIZEN"    onclick="toggleTag('CITIZEN')">CITIZEN</span>
+          <span class="chip" data-tag="RESHADE"    onclick="toggleTag('RESHADE')">RESHADE</span>
+          <span class="chip" data-tag="PLUGIN"     onclick="toggleTag('PLUGIN')">PLUGIN</span>
+          <span class="chip" data-tag="ENB"        onclick="toggleTag('ENB')">ENB</span>
+          <span class="chip" data-tag="SOUND PACK" onclick="toggleTag('SOUND PACK')">SOUND</span>
+        </div>
+      </div>
+
+      <div id="packs-grid" class="packs-grid"></div>
+      <div id="empty-state" class="empty-state" style="display:none">
+        <div class="empty-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+          </svg>
+        </div>
+        <div class="empty-title" id="empty-title">Aucun pack trouvé</div>
+        <p class="empty-desc" id="empty-desc">Configurez le dossier des packs dans les Paramètres puis cliquez sur Scanner.</p>
+        <button class="btn btn-secondary" onclick="navigate('settings')">Ouvrir les paramètres</button>
+      </div>
+    </div>
+
+    <!-- ════ PAGE WORKSHOP ════════════════════════════ -->
+    <div class="page" id="page-workshop">
+      <div class="page-header">
+        <div>
+          <div class="page-title" data-i18n="workshop_title">Workshop</div>
+          <div class="page-subtitle" data-i18n="workshop_subtitle">Téléchargez des packs depuis la communauté</div>
+        </div>
+        <button class="btn btn-secondary" onclick="refreshWorkshop()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/>
+          </svg>
+          <span data-i18n="btn_refresh">Actualiser</span>
+        </button>
+      </div>
+      <div id="ws-grid" class="ws-grid"></div>
+      <div id="ws-empty" class="empty-state" style="display:none">
+        <div class="empty-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="2" y1="12" x2="22" y2="12"/>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+          </svg>
+        </div>
+        <div class="empty-title" id="ws-empty-title" data-i18n="ws_empty_title">Aucun pack disponible</div>
+        <p class="empty-desc" id="ws-empty-desc" data-i18n="ws_empty_desc">Le workshop est vide ou inaccessible pour le moment.</p>
+      </div>
+    </div>
+
+    <!-- ════ PAGE TUTORIEL ═════════════════════════════ -->
+    <div class="page" id="page-tutorial">
+      <div class="page-header">
+        <div>
+          <div class="page-title">Guide d'utilisation</div>
+          <div class="page-subtitle">Instructions et références pour utiliser le launcher</div>
+        </div>
+      </div>
+
+      <div class="info-grid">
+        <div class="info-card">
+          <div class="info-card-ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+            </svg>
+          </div>
+          <div class="info-card-title">Packs graphiques</div>
+          <div class="info-card-desc">Chaque sous-dossier de votre répertoire devient un pack. Les tags sont détectés automatiquement.</div>
+        </div>
+        <div class="info-card">
+          <div class="info-card-ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <div class="info-card-title">Protection GTA V</div>
+          <div class="info-card-desc">Baseline SHA256 de tous les fichiers officiels. Seuls les fichiers ajoutés par des mods sont supprimés lors du nettoyage.</div>
+        </div>
+        <div class="info-card">
+          <div class="info-card-ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/>
+              <polyline points="17 21 17 13 7 13 7 21"/>
+              <polyline points="7 3 7 8 15 8"/>
+            </svg>
+          </div>
+          <div class="info-card-title">Sauvegardes auto</div>
+          <div class="info-card-desc">Chaque installation crée une sauvegarde dans <code>data/backups/</code>. Rollback possible.</div>
+        </div>
+        <div class="info-card">
+          <div class="info-card-ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="23 4 23 10 17 10"/>
+              <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/>
+            </svg>
+          </div>
+          <div class="info-card-title">Multithreading</div>
+          <div class="info-card-desc">Les copies de fichiers tournent en arrière-plan avec une barre de progression en temps réel.</div>
+        </div>
+      </div>
+
+      <div id="tutorial-accordions"></div>
+    </div>
+
+    <!-- ════ PAGE PARAMÈTRES ═══════════════════════════ -->
+    <div class="page" id="page-settings">
+      <div class="page-header">
+        <div>
+          <div class="page-title">Paramètres</div>
+          <div class="page-subtitle">Chemins d'accès et configuration</div>
+        </div>
+        <button class="btn btn-primary" onclick="saveSettings()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/>
+            <polyline points="17 21 17 13 7 13 7 21"/>
+            <polyline points="7 3 7 8 15 8"/>
+          </svg>
+          Sauvegarder
+        </button>
+      </div>
+
+      <!-- Packs dir -->
+      <div class="form-section">
+        <div class="form-section-title">Dossier des packs</div>
+        <div class="form-section-desc">Répertoire contenant vos packs graphiques. Chaque sous-dossier devient un pack détectable.</div>
+        <div class="form-group">
+          <label class="form-label">Chemin <span class="req">*</span></label>
+          <div class="form-row">
+            <input class="form-input" id="packs-dir" type="text" placeholder="Ex : C:\dev\GraphicPacks">
+            <button class="btn btn-secondary" onclick="browsePacksDir()">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
+              </svg>
+              Parcourir
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- FiveM -->
+      <div class="form-section">
+        <div class="form-section-title">FiveM</div>
+        <div class="form-section-desc">Sélectionnez <code>FiveM.exe</code>. Le dossier <code>FiveM Application Data</code> est détecté automatiquement dans le même répertoire.</div>
+        <div class="form-group">
+          <label class="form-label">FiveM.exe <span class="req">*</span></label>
+          <div class="form-row">
+            <input class="form-input" id="fivem-exe" type="text" placeholder="Ex : C:\Users\xxx\AppData\Local\FiveM\FiveM.exe">
+            <button class="btn btn-secondary" id="btn-browse-fivem" onclick="browseFivemExe()">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
+              </svg>
+              Sélectionner
+            </button>
+          </div>
+          <div class="form-hint" id="fivem-hint"></div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">FiveM Application Data (auto-détecté)</label>
+          <input class="form-input" id="fivem-data" type="text" placeholder="Détecté automatiquement" readonly>
+        </div>
+      </div>
+
+      <!-- GTA V -->
+      <div class="form-section">
+        <div class="form-section-title">GTA V</div>
+        <div class="form-section-desc">
+          Le dossier doit contenir : <code>GTA5.exe</code>, <code>GTAVLauncher.exe</code>, <code>x64b.rpf</code>, <code>x64v.rpf</code>.
+        </div>
+        <div class="form-group">
+          <label class="form-label">Dossier GTA V <span class="req">*</span></label>
+          <div class="form-row">
+            <input class="form-input" id="gtav-dir" type="text" placeholder="Ex : C:\Program Files\Rockstar Games\GTA V">
+            <button class="btn btn-secondary" onclick="browseGtavDir()">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
+              </svg>
+              Parcourir
+            </button>
+          </div>
+          <div class="form-hint" id="gtav-hint"></div>
+        </div>
+      </div>
+
+      <!-- Language -->
+      <div class="form-section">
+        <div class="form-section-title" data-i18n="section_language">Langue</div>
+        <div class="form-section-desc" data-i18n="section_language_desc">Langue de l'interface du launcher</div>
+        <div class="form-group">
+          <label class="form-label" data-i18n="section_language">Langue</label>
+          <select class="form-input" id="lang-select" onchange="onLangChange(this.value)" style="max-width:200px">
+            <option value="fr">Français</option>
+            <option value="en">English</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Baseline -->
+      <div class="form-section">
+        <div class="form-section-title" data-i18n="section_baseline">Protection GTA V — Baseline</div>
+        <div class="form-section-desc">
+          Calcule un index SHA256 de tous les fichiers officiels de GTA V. Lors du nettoyage, seuls les fichiers absents de cet index sont supprimés. À créer sur une installation propre, sans mods.
+        </div>
+        <div class="alert warning" style="margin-bottom:14px">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+            <line x1="12" y1="9" x2="12" y2="13"/>
+            <line x1="12" y1="17" x2="12.01" y2="17"/>
+          </svg>
+          <div>
+            <div class="alert-title">Recommandé sur installation vierge</div>
+            <div class="alert-desc">L'opération peut prendre 5 à 10 minutes selon la taille du jeu.</div>
+          </div>
+        </div>
+        <div style="display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap">
+          <div id="baseline-status" style="font-size:12.5px; color:var(--text2)">Vérification…</div>
+          <button class="btn btn-secondary" onclick="createBaseline()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+            Créer / Mettre à jour la baseline
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<!-- ══ MODAL OVERLAY ════════════════════════════════════ -->
+<div id="modal-overlay" class="modal-overlay" onclick="onOverlayClick(event)">
+
+  <!-- Progress -->
+  <div class="modal" id="modal-progress" style="display:none">
+    <div class="modal-head">
+      <div class="modal-ico blue">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="3"/>
+          <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+        </svg>
+      </div>
+      <div>
+        <div class="modal-title" id="prog-title">Opération en cours</div>
+        <div class="modal-desc">Veuillez patienter</div>
+      </div>
+    </div>
+    <div class="prog-info" id="prog-message">Initialisation…</div>
+    <div class="prog-bar"><div class="prog-fill" id="prog-fill" style="width:0%"></div></div>
+    <div class="prog-pct" id="prog-pct">0%</div>
+  </div>
+
+  <!-- Confirm -->
+  <div class="modal" id="modal-confirm" style="display:none">
+    <div class="modal-head">
+      <div class="modal-ico amber" id="confirm-ico">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+          <line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/>
+        </svg>
+      </div>
+      <div>
+        <div class="modal-title" id="confirm-title">Confirmer</div>
+        <div class="modal-desc" id="confirm-desc"></div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-ghost" onclick="closeModal()">Annuler</button>
+      <button class="btn btn-primary" id="confirm-ok">Confirmer</button>
+    </div>
+  </div>
+
+</div>
+
+<!-- ══ TOASTS ════════════════════════════════════════════ -->
+<div id="toast-wrap" class="toast-wrap"></div>
+
+<!-- ══ SCRIPTS ══════════════════════════════════════════ -->
+<script src="js/api.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>

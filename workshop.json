@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "updated": "2025-01-01",
+  "packs": [
+    {
+      "id": "example-naturalvision",
+      "name": "NaturalVision Evolved",
+      "author": "Razed",
+      "version": "2.1",
+      "description": "Pack graphique ultra-réaliste pour FiveM avec textures HD, ENB et ReShade.",
+      "tags": ["RESHADE", "ENB"],
+      "preview_url": "",
+      "download_url": "https://example.com/naturalvision.zip",
+      "size_mb": 450,
+      "downloads": 12500
+    }
+  ]
+}

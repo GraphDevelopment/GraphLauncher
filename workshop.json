@@ -3,6 +3,19 @@
   "updated": "2026-20-05",
   "packs": [
     {
+      "id": "jltomy-v2-opti",
+      "name": "JLTomy V2 Opti",
+      "author": "AbdelTTV",
+      "version": "2",
+      "description": "This graphics pack immerses you in an ultra-realistic atmosphere worthy of GTA 6. A true preview of what the next GTA could be like",
+      "tags": ["FIVEM", "MODS", "GTA", "SOUND PACK"],
+      "preview_url": "https://i.imgur.com/sJc3Xxq.jpeg",
+      "youtube_url": "https://www.youtube.com/watch?v=G7Zy8yDfJ_0",
+      "download_url": "https://archive.org/download/jltomy-v-2-opti/JLTomy%20V2%20Opti.rar",
+      "size_mb": 2214,
+      "downloads": 0
+    },
+    {
       "id": "hiro-v5",
       "name": "HIRO V5",
       "author": "Hiromasa",
@@ -16,16 +29,16 @@
       "downloads": 0
     },
     {
-      "id": "jltomy-v2-opti",
-      "name": "JLTomy V2 Opti",
-      "author": "AbdelTTV",
-      "version": "2",
-      "description": "This graphics pack immerses you in an ultra-realistic atmosphere worthy of GTA 6. A true preview of what the next GTA could be like",
-      "tags": ["FIVEM", "MODS", "GTA", "SOUND PACK"],
-      "preview_url": "https://i.imgur.com/sJc3Xxq.jpeg",
-      "youtube_url": "https://www.youtube.com/watch?v=G7Zy8yDfJ_0",
-      "download_url": "https://archive.org/download/jltomy-v-2-opti/JLTomy%20V2%20Opti.rar",
-      "size_mb": 2214,
+      "id": "hiro-v6",
+      "name": "HIRO V6",
+      "author": "Hiromasa",
+      "version": "6",
+      "description": "Explore landscapes, stunningly realistic textures, and breathtaking visual effects that will bring your game to life like never before",
+      "tags": ["GTA", "MODS", "PLUGIN"],
+      "preview_url": "https://i.imgur.com/ZtU8vib.jpeg",
+      "youtube_url": "https://www.youtube.com/watch?v=lz5lD2fZzGo",
+      "download_url": "",
+      "size_mb": 4200,
       "downloads": 0
     },
     {

@@ -582,19 +582,26 @@
 
 /* ── Video modal ─────────────────────────────────── */
 .modal-video {
-  width: min(1100px, 94vw);
-  padding: 16px;
+  width: min(1400px, 96vw);
+  max-height: 92vh;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
 }
 .modal-video .modal-head {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
+  flex-shrink: 0;
 }
 .video-embed-wrap {
   position: relative;
   width: 100%;
-  padding-bottom: 56.25%;
+  flex: 1;
+  min-height: 0;
+  /* 16:9 via aspect-ratio so the wrap fills all available height */
+  aspect-ratio: 16 / 9;
   background: #000;
   border-radius: var(--r-sm);
   overflow: hidden;

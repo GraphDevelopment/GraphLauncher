@@ -7,7 +7,7 @@ from pathlib import Path
 APP_NAME    = "Graph Launcher"
 ENTRY_POINT = "main.py"
 ICON        = "assets/icon.ico"
-VERSION     = "1.0.0"
+VERSION     = "1.2.7"
 
 ROOT = Path(__file__).parent
 SEP  = ";" if sys.platform == "win32" else ":"
@@ -31,11 +31,17 @@ def build() -> None:
         # webview (pywebview 6.x) — the package imports as "webview", not "pywebview"
         "--hidden-import", "webview",
         "--hidden-import", "webview.platforms.winforms",
-        "--collect-all",     "webview",
+        "--collect-all",   "webview",
 
         # pythonnet is required by webview on Windows
         "--hidden-import", "clr",
         "--collect-all",   "pythonnet",
+
+        # yt-dlp (YouTube stream extraction for video preview)
+        "--hidden-import", "yt_dlp",
+        "--hidden-import", "yt_dlp.extractor",
+        "--hidden-import", "yt_dlp.extractor.youtube",
+        "--collect-all",   "yt_dlp",
 
         ENTRY_POINT,
     ]

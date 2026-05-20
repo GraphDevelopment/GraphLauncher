@@ -42,6 +42,32 @@
       "downloads": 0
     },
     {
+      "id": "noxy-v5",
+      "name": "NOXY V5",
+      "author": "noxypack",
+      "version": "5",
+      "description": "Realistic FiveM graphics pack with vibrant colors, stunning reflections, enhanced lighting, and immersive visuals for a cinematic gameplay experience.",
+      "tags": ["GTA", "FIVEM"],
+      "preview_url": "https://i.imgur.com/5vapbR5.png",
+      "youtube_url": "https://www.youtube.com/watch?v=i-WZOh0kBoQ",
+      "download_url": "",
+      "size_mb": 2500,
+      "downloads": 0
+    },
+    {
+      "id": "noxy-summer",
+      "name": "SUMMER",
+      "author": "noxypack",
+      "version": "1",
+      "description": "A realistic FiveM graphics pack with vibrant summer colors, immersive lighting, warm sunsets, and a smooth visual experience for a more alive and modern Los Santos.",
+      "tags": ["GTA", "FIVEM"],
+      "preview_url": "https://i.imgur.com/OM63r5s.jpeg",
+      "youtube_url": "https://www.youtube.com/watch?v=DF-rAMeacsI",
+      "download_url": "",
+      "size_mb": 4000,
+      "downloads": 0
+    },
+    {
       "id": "spongebob",
       "name": "Sponge Bob",
       "author": "GraphDevelopment",

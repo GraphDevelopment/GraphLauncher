@@ -821,6 +821,14 @@ async function initApp() {
     navigate('packs');
   }
 
+  // Load version into titlebar dynamically (single source of truth = update_service.py)
+  Api.getAppInfo().then(info => {
+    if (info?.version) {
+      const el = document.querySelector('.titlebar-version');
+      if (el) el.textContent = 'v' + info.version;
+    }
+  });
+
   // Check for updates in background (non-blocking)
   checkUpdate();
 

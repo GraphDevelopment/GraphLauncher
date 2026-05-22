@@ -169,9 +169,3 @@ To publish a new version:
 - Automatic backup before every pack installation
 - User confirmation required before any clean or uninstall operation
 - All file operations sandboxed to configured pack and game directories
-
----
-
-## License
-
-MIT

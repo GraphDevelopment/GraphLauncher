@@ -7,13 +7,13 @@
 ## Features
 
 - **Pack Manager** — Scan a local folder, install/uninstall packs into FiveM or GTA V with one click
-- **Workshop** — Browse and download community graphic packs directly in the app (.zip and .rar supported)
-- **Video Preview** — Watch YouTube previews of packs inside the app (via yt-dlp, HD quality)
+- **Workshop** — Browse packs by category (Graphic Packs, Sound Packs, Mods) with dynamic filter chips driven entirely by `workshop.json`
+- **Video Preview** — Watch YouTube previews of packs inside the app (via yt-dlp, HD quality, no ffmpeg required)
 - **FiveM Cleaner** — Remove mods, plugins, ReShade and pack files from FiveM Application Data
 - **GTA V Cleaner** — Remove mod files from GTA V while protecting official files via SHA256 baseline
 - **Baseline Protection** — Index all official GTA V files (SHA256) so the cleaner never deletes them
 - **Auto-update** — Notified on startup when a new version is available on GitHub Releases
-- **Bilingual** — Full French and English interface (auto-detected from system locale)
+- **Bilingual** — Full French and English interface (auto-detected from system locale, switchable in Settings)
 
 ---
 
@@ -126,14 +126,17 @@ The Workshop reads `workshop.json` from this repository. To add a pack, append a
 {
   "packs": [
     {
+      "id": "my-pack-v1",
       "name": "My Pack",
       "author": "Author",
-      "description": "Short description.",
       "version": "1.0",
+      "categorie": "graphique",
+      "filtres": ["roleplay", "realiste"],
+      "description": "Short description.",
       "size_mb": 500,
       "downloads": 0,
-      "tags": ["reshade", "enb"],
-      "preview_url": "https://example.com/thumbnail.jpg",
+      "tags": ["RESHADE", "ENB"],
+      "preview_url": "https://i.imgur.com/XXXXXXX.jpg",
       "youtube_url": "https://www.youtube.com/watch?v=XXXXXXXXXXX",
       "download_url": "https://example.com/pack.zip"
     }
@@ -141,6 +144,36 @@ The Workshop reads `workshop.json` from this repository. To add a pack, append a
   "updated": "2026-01-01"
 }
 ```
+
+### Fields
+
+| Field | Required | Description |
+|---|---|---|
+| `id` | Yes | Unique slug (lowercase, hyphens) |
+| `name` | Yes | Display name |
+| `author` | Yes | Pack creator |
+| `version` | No | Version string |
+| `categorie` | Yes | One of: `graphique`, `son`, `mods` |
+| `filtres` | No | Array of filter tags — the app generates filter chips automatically from these values |
+| `description` | No | Short description shown on the card |
+| `size_mb` | No | File size in MB |
+| `downloads` | No | Download counter (cosmetic) |
+| `tags` | No | Technical tags shown as badges on the card |
+| `preview_url` | No | Thumbnail image URL (loaded via server-side proxy) |
+| `youtube_url` | No | YouTube video URL for the in-app HD preview |
+| `download_url` | Yes | Direct download link — `.zip` or `.rar` |
+
+### Categories
+
+| Value | Tab shown in app |
+|---|---|
+| `graphique` | Graphic Packs |
+| `son` | Sound Packs |
+| `mods` | Mods |
+
+### Filters
+
+The `filtres` array is completely free-form. The app reads all unique values across packs in the active category and renders a filter chip for each one automatically — no code changes needed to add new filters.
 
 **Supported download hosts:** pixeldrain, archive.org, GitHub Releases, or any direct link returning a `.zip` or `.rar` file (detected via `Content-Disposition`, `Content-Type`, or URL extension).
 
@@ -154,7 +187,7 @@ To publish a new version:
 1. Update `APP_VERSION` in `services/update_service.py`
 2. Update `AppVersion` in `installer.iss`
 3. Build the exe and installer
-4. Create a GitHub Release with a tag matching the version (e.g. `v1.2.8`)
+4. Create a GitHub Release with a tag matching the version (e.g. `v1.2.9`)
 
 ---
 

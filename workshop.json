@@ -161,6 +161,21 @@
       "download_url": "https://archive.org/download/blue-sky-with-stars/Blue%20Sky%20With%20Stars.rar",
       "size_mb": 84,
       "downloads": 0
+    },
+    {
+      "id": "muffed-gf",
+      "name": "Muffed",
+      "author": "GraphLauncher",
+      "version": "1",
+      "categorie": "son",
+      "filtres": ["GunFight"],
+      "description": "Sound Pack 4 GunFight",
+      "tags": ["SON"],
+      "preview_url": "https://i.imgur.com/au2NzAF.png",
+      "youtube_url": "https://www.youtube.com/watch?v=OAQF9xYCaFs",
+      "download_url": "https://archive.org/download/Muffed/Muffed.rar",
+      "size_mb": 61,
+      "downloads": 0
     }
   ]
 }

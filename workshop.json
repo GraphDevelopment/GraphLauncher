@@ -167,13 +167,29 @@
       "name": "Muffed",
       "author": "GraphLauncher",
       "version": "1",
-      "categorie": "Sound",
+      "categorie": "SON",
       "filtres": ["GunFight"],
       "description": "Sound Pack 4 GunFight",
-      "tags": ["SON"],
+      "tags": ["PACK SON"],
+      "preview_url": "",
       "youtube_url": "https://www.youtube.com/watch?v=OAQF9xYCaFs",
       "download_url": "https://archive.org/download/Muffed/Muffed.rar",
       "size_mb": 61,
+      "downloads": 0
+    },
+    {
+      "id": "sp2-rp",
+      "name": "SP2",
+      "author": "bxbydrako",
+      "version": "1",
+      "categorie": "Sound",
+      "filtres": ["Roleplay"],
+      "description": "Roleplay sound pack",
+      "tags": ["PACK SON"],
+      "preview_url": "",
+      "youtube_url": "https://www.youtube.com/watch?v=ESi79v0tzsI",
+      "download_url": "https://archive.org/download/sp2_20260524/sp2.rar",
+      "size_mb": 95,
       "downloads": 0
     }
   ]

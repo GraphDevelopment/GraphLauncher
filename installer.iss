@@ -2,9 +2,9 @@
 ; Compiler : Inno Setup 6.x  https://jrsoftware.org/isinfo.php
 
 #define AppName      "Graph Launcher"
-#define AppVersion   "1.2.8"
-#define AppPublisher "Ayka"
-#define AppURL       "https://www.ayka.dev"
+#define AppVersion   "1.2.7"
+#define AppPublisher "GraphDevelopment"
+#define AppURL       "https://github.com/GraphDevelopment/GraphLauncher"
 #define AppExe       "Graph Launcher.exe"
 
 [Setup]
@@ -17,7 +17,7 @@ DefaultDirName={autopf}\{#AppName}
 DefaultGroupName={#AppName}
 AllowNoIcons=yes
 OutputDir=installer_output
-OutputBaseFilename=Graph_Launcher_Setup_v{#AppVersion}
+OutputBaseFilename=Graph Launcher Setup v{#AppVersion}
 SetupIconFile=assets\icon.ico
 Compression=lzma2/ultra64
 SolidCompression=yes

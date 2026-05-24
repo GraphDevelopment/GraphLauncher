@@ -216,6 +216,13 @@
           </button>
         </div>
       </div>
+      <div class="ws-cats" id="ws-cats">
+        <button class="ws-cat active" data-cat="all"       onclick="setWsCategory('all')">       <span data-i18n="ws_cat_all">Tous</span></button>
+        <button class="ws-cat"        data-cat="graphique" onclick="setWsCategory('graphique')"> <span data-i18n="ws_cat_graphique">Packs Graphiques</span></button>
+        <button class="ws-cat"        data-cat="son"       onclick="setWsCategory('son')">       <span data-i18n="ws_cat_son">Packs Son</span></button>
+        <button class="ws-cat"        data-cat="mods"      onclick="setWsCategory('mods')">      <span data-i18n="ws_cat_mods">Mods</span></button>
+      </div>
+      <div class="filter-row" id="ws-filters" style="display:none;margin-bottom:16px"></div>
       <div id="ws-grid" class="ws-grid"></div>
       <div id="ws-empty" class="empty-state" style="display:none">
         <div class="empty-icon">

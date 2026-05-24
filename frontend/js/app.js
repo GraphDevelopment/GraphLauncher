@@ -13,6 +13,8 @@ const S = {
   activeBtn:    null,
   updateUrl:    null,
   workshopPacks: [],
+  wsCategory: 'all',
+  wsActiveFilters: [],
 };
 
 /* ── i18n shortcut ──────────────────────────────────────── */
@@ -640,8 +642,13 @@ const WS_IMG_CACHE = new Map(); // url → base64 data URI
 
 async function refreshWorkshop() {
   WS_IMG_CACHE.clear();
+  S.wsCategory = 'all';
+  S.wsActiveFilters = [];
+  document.querySelectorAll('.ws-cat').forEach(b => b.classList.toggle('active', b.dataset.cat === 'all'));
   const search = $('ws-search');
   if (search) search.value = '';
+  $('ws-filters').style.display = 'none';
+  $('ws-filters').innerHTML = '';
 
   const btn = document.querySelector('[onclick="refreshWorkshop()"]');
   btnLoad(btn, '');
@@ -663,21 +670,76 @@ async function refreshWorkshop() {
   S.workshopPacks = r.packs;
   const grid = $('ws-grid');
   r.packs.forEach(p => grid.appendChild(buildWsCard(p)));
+  buildWsFilterChips();
+}
+
+function setWsCategory(cat) {
+  S.wsCategory = cat;
+  S.wsActiveFilters = [];
+  document.querySelectorAll('.ws-cat').forEach(b => b.classList.toggle('active', b.dataset.cat === cat));
+  buildWsFilterChips();
+  applyWsFilters();
+}
+
+function toggleWsFilter(filter) {
+  const idx = S.wsActiveFilters.indexOf(filter);
+  if (idx >= 0) S.wsActiveFilters.splice(idx, 1);
+  else S.wsActiveFilters.push(filter);
+  document.querySelectorAll('#ws-filters .chip').forEach(c =>
+    c.classList.toggle('active', S.wsActiveFilters.includes(c.dataset.filter))
+  );
+  applyWsFilters();
+}
+
+function buildWsFilterChips() {
+  const relevant = S.workshopPacks.filter(p =>
+    S.wsCategory === 'all' || p.categorie === S.wsCategory
+  );
+  const allFilters = new Set();
+  relevant.forEach(p => (p.filtres || []).forEach(f => allFilters.add(f)));
+
+  const container = $('ws-filters');
+  if (allFilters.size === 0) { container.style.display = 'none'; container.innerHTML = ''; return; }
+
+  container.style.display = 'flex';
+  container.innerHTML = '';
+  allFilters.forEach(f => {
+    const chip = document.createElement('span');
+    chip.className = 'chip';
+    chip.dataset.filter = f;
+    chip.textContent = f.charAt(0).toUpperCase() + f.slice(1);
+    chip.onclick = () => toggleWsFilter(f);
+    container.appendChild(chip);
+  });
+}
+
+function applyWsFilters() {
+  const search = ($('ws-search')?.value || '').trim().toLowerCase();
+  let visible = 0;
+  document.querySelectorAll('#ws-grid .ws-card').forEach(card => {
+    const matchCat    = S.wsCategory === 'all' || card.dataset.categorie === S.wsCategory;
+    const cardFilters = card.dataset.filtres ? card.dataset.filtres.split(',') : [];
+    const matchFilter = S.wsActiveFilters.length === 0 ||
+      S.wsActiveFilters.some(f => cardFilters.includes(f));
+    const matchSearch = !search || (card.dataset.search || '').includes(search);
+    const show = matchCat && matchFilter && matchSearch;
+    card.style.display = show ? '' : 'none';
+    if (show) visible++;
+  });
+  $('ws-empty').style.display = visible === 0 && S.workshopPacks.length > 0 ? 'flex' : 'none';
 }
 
 function filterWorkshop(query) {
-  const q = query.trim().toLowerCase();
-  document.querySelectorAll('#ws-grid .ws-card').forEach(card => {
-    const text = card.dataset.search || '';
-    card.style.display = (!q || text.includes(q)) ? '' : 'none';
-  });
+  applyWsFilters();
 }
 
 function buildWsCard(pack) {
   const el = document.createElement('div');
   el.className = 'ws-card';
   // data-search lets filterWorkshop() do fast substring matching
-  el.dataset.search = [pack.name, pack.author, pack.description, ...(pack.tags || [])].join(' ').toLowerCase();
+  el.dataset.search    = [pack.name, pack.author, pack.description, ...(pack.tags || []), ...(pack.filtres || [])].join(' ').toLowerCase();
+  el.dataset.categorie = pack.categorie || '';
+  el.dataset.filtres   = (pack.filtres || []).join(',');
   const imgId = 'ws-img-' + pack.id.replace(/[^a-z0-9]/gi, '-');
 
   const tags = (pack.tags || []).map(tg => {

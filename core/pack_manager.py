@@ -191,6 +191,13 @@ class PackManager:
                         manifest["copied"].extend(copied)
                         logger.info("Installed %d .rpf files -> %s", len(rpf_files), sfx_dst)
 
+                # ── RPF files at pack root (sound pack extracted flat) ─
+                elif item.is_file() and item.suffix.lower() == ".rpf":
+                    sfx_dst = gtav / "x64" / "audio" / "sfx"
+                    copied = self.fs.copy_files([item], sfx_dst)
+                    manifest["copied"].extend(copied)
+                    logger.info("Installed RPF %s -> %s", item.name, sfx_dst)
+
                 # ── ReShade (root-level files) ─────────────────────────
                 elif item.is_file() and (
                     _norm(item.name) in _RESHADE_FILES

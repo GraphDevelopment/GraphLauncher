@@ -136,16 +136,30 @@
     },
     {
       "id": "blue-purple",
-      "name": "blue-purple",
+      "name": "Blue Purple",
       "author": "Pasha",
       "version": "1",
       "categorie": "graphique",
-      "filtres": ["Pvp"],
+      "filtres": ["Pvp", "Optimized"],
       "description": "Blue & Purple",
       "tags": ["CITIZEN"],
       "preview_url": "https://i.imgur.com/1AhQlng.png",
       "download_url": "https://archive.org/download/blue-purple-pack-pvp/Blue%20Purple%20Pack%20PVP.rar",
       "size_mb": 78,
+      "downloads": 0
+    },
+    {
+      "id": "blue-sky-w-stars",
+      "name": "Swiper Sky with Stars",
+      "author": "GraphLauncher",
+      "version": "1",
+      "categorie": "graphique",
+      "filtres": ["Pvp", "Optimized"],
+      "description": "Blue Sky With Stars",
+      "tags": ["CITIZEN", "MODS"],
+      "preview_url": "https://i.imgur.com/g2DH80T.png",
+      "download_url": "https://archive.org/download/blue-sky-with-stars/Blue%20Sky%20With%20Stars.rar",
+      "size_mb": 84,
       "downloads": 0
     }
   ]

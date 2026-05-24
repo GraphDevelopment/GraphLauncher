@@ -40,17 +40,13 @@ Download the latest installer from the [Releases page](https://github.com/GraphD
 ## Running from source
 
 ```bash
-# Clone the repository
 git clone https://github.com/GraphDevelopment/GraphLauncher.git
 cd GraphLauncher
 
-# Install dependencies
 pip install -r requirements.txt
 
-# Run
 python main.py
 
-# Run with DevTools open
 python main.py --debug
 ```
 
@@ -139,7 +135,7 @@ The Workshop reads `workshop.json` from this repository. To add a pack, append a
       "tags": ["reshade", "enb"],
       "preview_url": "https://example.com/thumbnail.jpg",
       "youtube_url": "https://www.youtube.com/watch?v=XXXXXXXXXXX",
-      "download_url": "https://example.com/mypack.zip"
+      "download_url": "https://example.com/pack.zip"
     }
   ],
   "updated": "2026-01-01"
@@ -169,9 +165,3 @@ To publish a new version:
 - Automatic backup before every pack installation
 - User confirmation required before any clean or uninstall operation
 - All file operations sandboxed to configured pack and game directories
-
----
-
-## License
-
-MIT

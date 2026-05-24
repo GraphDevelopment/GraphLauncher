@@ -81,6 +81,18 @@
       "downloads": 0
     },
     {
+      "id": "realistic-vision",
+      "name": "Realistic Vision",
+      "author": "GraphLauncher",
+      "version": "1",
+      "description": "Perfect for street, gang, and car meet - Ultra-realistic FiveM graphics pack with cinematic lighting, realistic reflections, immersive colors, and enhanced weather effects for the ultimate RP experience",
+      "tags": ["ENB", "MODS"],
+      "preview_url": "https://i.imgur.com/wOuGfvd.png",
+      "download_url": "https://archive.org/download/graphics-mod-five-m/Graphics%20Mod%20FiveM.rar",
+      "size_mb": 316,
+      "downloads": 0
+    },
+    {
       "id": "spongebob",
       "name": "Sponge Bob",
       "author": "GraphDevelopment",

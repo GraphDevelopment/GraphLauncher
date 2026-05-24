@@ -120,8 +120,8 @@
     <div class="page" id="page-packs">
       <div class="page-header">
         <div>
-          <div class="page-title">Gestionnaire de packs</div>
-          <div class="page-subtitle">Installez et gérez vos packs graphiques FiveM</div>
+          <div class="page-title" data-i18n="packs_title">Gestionnaire de packs</div>
+          <div class="page-subtitle" data-i18n="packs_subtitle">Installez et gérez vos packs graphiques FiveM</div>
         </div>
         <div style="display:flex;gap:8px;align-items:center">
           <button class="btn btn-warn" onclick="confirmClean('fivem',this)">
@@ -141,22 +141,22 @@
               <polyline points="23 4 23 10 17 10"/>
               <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/>
             </svg>
-            Scanner
+            <span data-i18n="btn_scan">Scanner</span>
           </button>
         </div>
       </div>
 
       <div class="stats-row">
         <div class="stat-card">
-          <div class="stat-label">Packs détectés</div>
+          <div class="stat-label" data-i18n="stat_detected">Packs détectés</div>
           <div class="stat-val" id="stat-total">—</div>
         </div>
         <div class="stat-card">
-          <div class="stat-label">Installés</div>
+          <div class="stat-label" data-i18n="stat_installed">Installés</div>
           <div class="stat-val" style="color:var(--green)" id="stat-installed">—</div>
         </div>
         <div class="stat-card">
-          <div class="stat-label">Disponibles</div>
+          <div class="stat-label" data-i18n="stat_available">Disponibles</div>
           <div class="stat-val" style="color:var(--text3)" id="stat-pending">—</div>
         </div>
       </div>
@@ -166,12 +166,12 @@
           <svg class="ico-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
           </svg>
-          <input class="search-input" id="search-input" type="text" placeholder="Rechercher un pack…" oninput="onSearch(this.value)">
+          <input class="search-input" id="search-input" type="text" data-i18n-ph="search_packs_ph" placeholder="Rechercher un pack…" oninput="onSearch(this.value)">
         </div>
         <div class="filter-row" id="status-filters">
-          <span class="chip active" data-status="all"           onclick="setStatusFilter('all')">Tous</span>
-          <span class="chip"       data-status="installed"      onclick="setStatusFilter('installed')">Installés</span>
-          <span class="chip"       data-status="not-installed"  onclick="setStatusFilter('not-installed')">Non installés</span>
+          <span class="chip active" data-status="all"           onclick="setStatusFilter('all')"          data-i18n="filter_all">Tous</span>
+          <span class="chip"       data-status="installed"      onclick="setStatusFilter('installed')"     data-i18n="filter_installed">Installés</span>
+          <span class="chip"       data-status="not-installed"  onclick="setStatusFilter('not-installed')" data-i18n="filter_not_installed">Non installés</span>
         </div>
         <div class="filter-row" id="tag-filters">
           <span class="chip" data-tag="MODS"       onclick="toggleTag('MODS')">MODS</span>
@@ -192,7 +192,7 @@
         </div>
         <div class="empty-title" id="empty-title">Aucun pack trouvé</div>
         <p class="empty-desc" id="empty-desc">Configurez le dossier des packs dans les Paramètres puis cliquez sur Scanner.</p>
-        <button class="btn btn-secondary" onclick="navigate('settings')">Ouvrir les paramètres</button>
+        <button class="btn btn-secondary" onclick="navigate('settings')" data-i18n="btn_open_settings">Ouvrir les paramètres</button>
       </div>
     </div>
 
@@ -240,8 +240,8 @@
     <div class="page" id="page-tutorial">
       <div class="page-header">
         <div>
-          <div class="page-title">Guide d'utilisation</div>
-          <div class="page-subtitle">Instructions et références pour utiliser le launcher</div>
+          <div class="page-title" data-i18n="tutorial_title">Guide d'utilisation</div>
+          <div class="page-subtitle" data-i18n="tutorial_subtitle">Instructions et références pour utiliser le launcher</div>
         </div>
       </div>
 
@@ -252,8 +252,8 @@
               <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
             </svg>
           </div>
-          <div class="info-card-title">Packs graphiques</div>
-          <div class="info-card-desc">Chaque sous-dossier de votre répertoire devient un pack. Les tags sont détectés automatiquement.</div>
+          <div class="info-card-title" data-i18n="tut_card1_title">Packs graphiques</div>
+          <div class="info-card-desc"  data-i18n="tut_card1_desc">Chaque sous-dossier de votre répertoire devient un pack. Les tags sont détectés automatiquement.</div>
         </div>
         <div class="info-card">
           <div class="info-card-ico">
@@ -261,8 +261,8 @@
               <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
             </svg>
           </div>
-          <div class="info-card-title">Protection GTA V</div>
-          <div class="info-card-desc">Baseline SHA256 de tous les fichiers officiels. Seuls les fichiers ajoutés par des mods sont supprimés lors du nettoyage.</div>
+          <div class="info-card-title" data-i18n="tut_card2_title">Protection GTA V</div>
+          <div class="info-card-desc"  data-i18n="tut_card2_desc">Baseline SHA256 de tous les fichiers officiels. Seuls les fichiers ajoutés par des mods sont supprimés lors du nettoyage.</div>
         </div>
         <div class="info-card">
           <div class="info-card-ico">
@@ -272,8 +272,8 @@
               <polyline points="7 3 7 8 15 8"/>
             </svg>
           </div>
-          <div class="info-card-title">Sauvegardes auto</div>
-          <div class="info-card-desc">Chaque installation crée une sauvegarde dans <code>data/backups/</code>. Rollback possible.</div>
+          <div class="info-card-title" data-i18n="tut_card3_title">Sauvegardes auto</div>
+          <div class="info-card-desc"  data-i18n="tut_card3_desc">Chaque installation crée une sauvegarde dans data/backups/. Rollback possible.</div>
         </div>
         <div class="info-card">
           <div class="info-card-ico">
@@ -282,8 +282,8 @@
               <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/>
             </svg>
           </div>
-          <div class="info-card-title">Multithreading</div>
-          <div class="info-card-desc">Les copies de fichiers tournent en arrière-plan avec une barre de progression en temps réel.</div>
+          <div class="info-card-title" data-i18n="tut_card4_title">Multithreading</div>
+          <div class="info-card-desc"  data-i18n="tut_card4_desc">Les copies de fichiers tournent en arrière-plan avec une barre de progression en temps réel.</div>
         </div>
       </div>
 
@@ -294,8 +294,8 @@
     <div class="page" id="page-settings">
       <div class="page-header">
         <div>
-          <div class="page-title">Paramètres</div>
-          <div class="page-subtitle">Chemins d'accès et configuration</div>
+          <div class="page-title" data-i18n="settings_title">Paramètres</div>
+          <div class="page-subtitle" data-i18n="settings_subtitle">Chemins d'accès et configuration</div>
         </div>
         <button class="btn btn-primary" onclick="saveSettings()">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -303,23 +303,23 @@
             <polyline points="17 21 17 13 7 13 7 21"/>
             <polyline points="7 3 7 8 15 8"/>
           </svg>
-          Sauvegarder
+          <span data-i18n="btn_save">Sauvegarder</span>
         </button>
       </div>
 
       <!-- Packs dir -->
       <div class="form-section">
-        <div class="form-section-title">Dossier des packs</div>
-        <div class="form-section-desc">Répertoire contenant vos packs graphiques. Chaque sous-dossier devient un pack détectable.</div>
+        <div class="form-section-title" data-i18n="section_packs_dir">Dossier des packs</div>
+        <div class="form-section-desc" data-i18n="section_packs_dir_desc">Répertoire contenant vos packs graphiques. Chaque sous-dossier devient un pack détectable.</div>
         <div class="form-group">
-          <label class="form-label">Chemin <span class="req">*</span></label>
+          <label class="form-label"><span data-i18n="label_path">Chemin</span> <span class="req">*</span></label>
           <div class="form-row">
             <input class="form-input" id="packs-dir" type="text" placeholder="Ex : C:\dev\GraphicPacks">
             <button class="btn btn-secondary" onclick="browsePacksDir()">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
               </svg>
-              Parcourir
+              <span data-i18n="btn_browse">Parcourir</span>
             </button>
           </div>
         </div>
@@ -328,7 +328,7 @@
       <!-- FiveM -->
       <div class="form-section">
         <div class="form-section-title">FiveM</div>
-        <div class="form-section-desc">Sélectionnez <code>FiveM.exe</code>. Le dossier <code>FiveM Application Data</code> est détecté automatiquement dans le même répertoire.</div>
+        <div class="form-section-desc" data-i18n="section_fivem_desc">Sélectionnez FiveM.exe — le dossier de données est détecté automatiquement.</div>
         <div class="form-group">
           <label class="form-label">FiveM.exe <span class="req">*</span></label>
           <div class="form-row">
@@ -337,13 +337,13 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
               </svg>
-              Sélectionner
+              <span data-i18n="btn_select">Sélectionner</span>
             </button>
           </div>
           <div class="form-hint" id="fivem-hint"></div>
         </div>
         <div class="form-group">
-          <label class="form-label">FiveM Application Data (auto-détecté)</label>
+          <label class="form-label" data-i18n="label_fivem_data">FiveM Application Data (auto-détecté)</label>
           <input class="form-input" id="fivem-data" type="text" placeholder="Détecté automatiquement" readonly>
         </div>
       </div>
@@ -352,17 +352,16 @@
       <div class="form-section">
         <div class="form-section-title">GTA V</div>
         <div class="form-section-desc">
-          Le dossier doit contenir : <code>GTA5.exe</code>, <code>GTAVLauncher.exe</code>, <code>x64b.rpf</code>, <code>x64v.rpf</code>.
-        </div>
+        <div class="form-section-desc" data-i18n="section_gtav_desc">Le dossier doit contenir : GTA5.exe, GTAVLauncher.exe, x64b.rpf, x64v.rpf.</div>
         <div class="form-group">
-          <label class="form-label">Dossier GTA V <span class="req">*</span></label>
+          <label class="form-label"><span data-i18n="label_gtav_dir">Dossier GTA V</span> <span class="req">*</span></label>
           <div class="form-row">
             <input class="form-input" id="gtav-dir" type="text" placeholder="Ex : C:\Program Files\Rockstar Games\GTA V">
             <button class="btn btn-secondary" onclick="browseGtavDir()">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
               </svg>
-              Parcourir
+              <span data-i18n="btn_browse">Parcourir</span>
             </button>
           </div>
           <div class="form-hint" id="gtav-hint"></div>
@@ -386,8 +385,7 @@
       <div class="form-section">
         <div class="form-section-title" data-i18n="section_baseline">Protection GTA V — Baseline</div>
         <div class="form-section-desc">
-          Calcule un index SHA256 de tous les fichiers officiels de GTA V. Lors du nettoyage, seuls les fichiers absents de cet index sont supprimés. À créer sur une installation propre, sans mods.
-        </div>
+        <div class="form-section-desc" data-i18n="section_baseline_desc">Calcule un index SHA256 de tous les fichiers officiels de GTA V. Lors du nettoyage, seuls les fichiers absents de cet index sont supprimés. À créer sur une installation propre, sans mods.</div>
         <div class="alert warning" style="margin-bottom:14px">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
@@ -395,8 +393,8 @@
             <line x1="12" y1="17" x2="12.01" y2="17"/>
           </svg>
           <div>
-            <div class="alert-title">Recommandé sur installation vierge</div>
-            <div class="alert-desc">L'opération peut prendre 5 à 10 minutes selon la taille du jeu.</div>
+            <div class="alert-title" data-i18n="baseline_warning_title">Recommandé sur installation vierge</div>
+            <div class="alert-desc"  data-i18n="baseline_warning_desc">L'opération peut prendre 5 à 10 minutes selon la taille du jeu.</div>
           </div>
         </div>
         <div style="display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap">
@@ -405,7 +403,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
             </svg>
-            Créer / Mettre à jour la baseline
+            <span data-i18n="btn_create_baseline">Créer / Mettre à jour la baseline</span>
           </button>
         </div>
       </div>
@@ -445,7 +443,7 @@
     <div class="video-embed-wrap">
       <div class="video-loading" id="video-loading">
         <div class="video-spinner"></div>
-        <span id="video-loading-msg">Chargement…</span>
+        <span id="video-loading-msg" data-i18n="video_loading">Chargement…</span>
       </div>
       <video id="video-player" controls style="display:none;position:absolute;inset:0;width:100%;height:100%;background:#000"></video>
       <audio id="video-audio" style="display:none"></audio>

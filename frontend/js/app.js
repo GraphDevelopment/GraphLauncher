@@ -83,7 +83,7 @@ function navigate(page) {
 
 async function refreshPacks() {
   const btn = document.querySelector('[onclick="refreshPacks()"]');
-  btnLoad(btn, 'Scan…');
+  btnLoad(btn, t('scanning'));
   showSkeletons();
   const r = await Api.scanPacks();
   btnReset(btn);

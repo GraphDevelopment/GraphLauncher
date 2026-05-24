@@ -36,6 +36,16 @@ const I18n = (() => {
 
       tutorial_title: "Guide d'utilisation",
       tutorial_subtitle: 'Instructions et références pour utiliser le launcher',
+      tut_card1_title: 'Packs graphiques',
+      tut_card1_desc: 'Chaque sous-dossier de votre répertoire devient un pack. Les tags sont détectés automatiquement.',
+      tut_card2_title: 'Protection GTA V',
+      tut_card2_desc: 'Baseline SHA256 de tous les fichiers officiels. Seuls les fichiers ajoutés par des mods sont supprimés lors du nettoyage.',
+      tut_card3_title: 'Sauvegardes auto',
+      tut_card3_desc: 'Chaque installation crée une sauvegarde dans data/backups/. Rollback possible.',
+      tut_card4_title: 'Multithreading',
+      tut_card4_desc: 'Les copies de fichiers tournent en arrière-plan avec une barre de progression en temps réel.',
+      video_loading: 'Chargement…',
+      search_packs_ph: 'Rechercher un pack…',
 
       settings_title: 'Paramètres', settings_subtitle: "Chemins d'accès et configuration",
       btn_save: 'Sauvegarder',
@@ -133,6 +143,16 @@ const I18n = (() => {
 
       tutorial_title: 'User guide',
       tutorial_subtitle: 'Instructions and references for the launcher',
+      tut_card1_title: 'Graphic packs',
+      tut_card1_desc: 'Each subfolder in your directory becomes a pack. Tags are detected automatically.',
+      tut_card2_title: 'GTA V Protection',
+      tut_card2_desc: 'SHA256 baseline of all official files. Only files added by mods are deleted during cleanup.',
+      tut_card3_title: 'Auto backups',
+      tut_card3_desc: 'Each install creates a backup in data/backups/. Rollback available.',
+      tut_card4_title: 'Multithreading',
+      tut_card4_desc: 'File copies run in the background with a real-time progress bar.',
+      video_loading: 'Loading…',
+      search_packs_ph: 'Search a pack…',
 
       settings_title: 'Settings', settings_subtitle: 'Paths and configuration',
       btn_save: 'Save',

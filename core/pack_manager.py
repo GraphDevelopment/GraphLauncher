@@ -143,6 +143,15 @@ class PackManager:
             if progress_cb:
                 progress_cb(pct, msg)
 
+        # Unwrap single-root archives: if the pack folder contains exactly one
+        # subfolder that doesn't match any known installation pattern, treat its
+        # contents as the real pack root (common with poorly-structured archives).
+        _known = _FIVEM_SUBDIRS | _FIVEM_ROOT_DIRS | _GTA_DIRS | _SOUND_DIRS
+        _top = [i for i in pack.iterdir() if not i.name.startswith('.')]
+        if len(_top) == 1 and _top[0].is_dir() and _norm(_top[0].name) not in _known:
+            pack = _top[0]
+            logger.info("Single-root archive detected, unwrapping to: %s", pack)
+
         _progress(0, "Analyse du pack…")
         total_steps = max(sum(1 for i in pack.iterdir() if i.is_dir() or i.is_file()), 1)
         step = 0

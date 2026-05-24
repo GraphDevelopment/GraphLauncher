@@ -13,7 +13,7 @@ const S = {
   activeBtn:    null,
   updateUrl:    null,
   workshopPacks: [],
-  wsCategory: 'all',
+  wsCategory: 'graphique',
   wsActiveFilters: [],
 };
 
@@ -642,9 +642,9 @@ const WS_IMG_CACHE = new Map(); // url → base64 data URI
 
 async function refreshWorkshop() {
   WS_IMG_CACHE.clear();
-  S.wsCategory = 'all';
+  S.wsCategory = 'graphique';
   S.wsActiveFilters = [];
-  document.querySelectorAll('.ws-cat').forEach(b => b.classList.toggle('active', b.dataset.cat === 'all'));
+  document.querySelectorAll('.ws-cat').forEach(b => b.classList.toggle('active', b.dataset.cat === 'graphique'));
   const search = $('ws-search');
   if (search) search.value = '';
   $('ws-filters').style.display = 'none';

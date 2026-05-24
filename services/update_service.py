@@ -7,7 +7,7 @@ from utils.logger import get_logger
 
 logger = get_logger(__name__)
 
-APP_VERSION = "1.2.8"
+APP_VERSION = "1.2.9"
 RELEASES_API = "https://api.github.com/repos/GraphDevelopment/GraphLauncher/releases/latest"
 RELEASES_PAGE = "https://github.com/GraphDevelopment/GraphLauncher/releases/latest"
 

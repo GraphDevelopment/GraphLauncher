@@ -2,7 +2,7 @@
 ; Compiler : Inno Setup 6.x  https://jrsoftware.org/isinfo.php
 
 #define AppName      "Graph Launcher"
-#define AppVersion   "1.2.7"
+#define AppVersion   "1.2.9"
 #define AppPublisher "GraphDevelopment"
 #define AppURL       "https://github.com/GraphDevelopment/GraphLauncher"
 #define AppExe       "Graph Launcher.exe"

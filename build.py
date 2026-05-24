@@ -7,7 +7,7 @@ from pathlib import Path
 APP_NAME    = "Graph Launcher"
 ENTRY_POINT = "main.py"
 ICON        = "assets/icon.ico"
-VERSION     = "1.2.8"
+VERSION     = "1.2.9"
 
 ROOT = Path(__file__).parent
 SEP  = ";" if sys.platform == "win32" else ":"

@@ -18,8 +18,23 @@
       "downloads": 0
     },
     {
+      "id": "opti-v5-graphics-pack",
+      "name": "OPTI V5 GRAPHICS PACK",
+      "author": "Nway2K",
+      "version": "5",
+      "categorie": "graphique",
+      "filtres": ["Roleplay"],
+      "description": "FREE 2026 OPTI-REALISTIC GRAPHICS PACK | BEST FULL OPTI-REALISTIC PACK",
+      "tags": ["FIVEM", "PLUGIN", "GTA", "MODS" ],
+      "preview_url": "https://i.ytimg.com/vi/ccCfNU_GkEY/hqdefault.jpg",
+      "youtube_url": "https://youtu.be/ccCfNU_GkEY",
+      "download_url": "https://archive.org/download/pack-opti-resaliste-nwayk-2-k-v-5/PACK%20OPTI%20RESALISTE%20NWAYK2K%20V5.rar",
+      "size_mb": 322,
+      "downloads": 0
+    },
+    {
       "id": "pack-photo-nway-2-k",
-      "name": "Pack Photo Nway 2K",
+      "name": "Nway 2K Photo Pack",
       "author": "Nway2K",
       "version": "1",
       "categorie": "graphique",
@@ -27,7 +42,7 @@
       "description": "SPECIAL PHOTO GRAPHIC PACK 2025 | BEST FIVEM PHOTO PACK",
       "tags": ["FIVEM", "PLUGIN", "GTA"],
       "preview_url": "https://i.ytimg.com/vi/-mIYTeBuF0Q/hqdefault.jpg",
-      "youtube_url": "hhttps://youtu.be/-mIYTeBuF0Q",
+      "youtube_url": "https://youtu.be/-mIYTeBuF0Q",
       "download_url": "https://archive.org/download/pack-photo-nway-2-k/PACK%20PHOTO%20NWAY2K.rar",
       "size_mb": 322,
       "downloads": 0
